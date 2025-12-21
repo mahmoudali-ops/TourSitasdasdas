@@ -21,7 +21,7 @@ register();
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [RouterLink,TranslatedPipe],
+  imports: [RouterLink, TranslatedPipe, ClientFooterComponent,ClientFooterComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],   // ← ← المهم هنا
 
   templateUrl: './home.component.html',

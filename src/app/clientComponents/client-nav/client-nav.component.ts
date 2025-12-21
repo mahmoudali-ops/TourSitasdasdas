@@ -97,7 +97,7 @@ export class ClientNavComponent implements OnInit {
     private translationService: TranslationService
   ) {}
 
-  changeLang(lang: 'en' | 'ar'| 'de' | 'nl') {
+  changeLang(lang: 'en' | 'de' | 'nl') {
     this.langService.setLanguage(lang);
     // تحديث TranslationService أيضاً لضمان التزامن
     this.translationService.setLang(lang);
