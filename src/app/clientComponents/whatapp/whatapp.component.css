@@ -1,0 +1,70 @@
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 10000;
+  }
+  
+  /* الزر نفسه */
+  .whatsapp-float a {
+    width: 70px; /* أكبر شوي */
+    height: 70px;
+    background: #25d366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 15px 35px rgba(37, 211, 102, 0.55);
+    animation: whatsapp-bounce 2s infinite;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Hover */
+  .whatsapp-float a:hover {
+    animation-play-state: paused;
+    transform: scale(1.15) rotate(5deg);
+    box-shadow: 0 20px 45px rgba(37, 211, 102, 0.7);
+  }
+  
+  /* الصورة */
+  .whatsapp-icon {
+    width: 40px; /* أكبر شوي */
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    animation: whatsapp-rotate 4s linear infinite;
+  }
+  
+  /* Bounce + Pulse */
+  @keyframes whatsapp-bounce {
+    0%, 100% { transform: translateY(0); }
+    25% { transform: translateY(-6px); }
+    50% { transform: translateY(-10px); }
+    75% { transform: translateY(-6px); }
+  }
+  
+  /* Rotate الصورة داخل الزر */
+  @keyframes whatsapp-rotate {
+    0% { transform: rotate(0deg); }
+    50% { transform: rotate(10deg); }
+    100% { transform: rotate(0deg); }
+  }
+  
+  /* 📱 Mobile */
+  @media (max-width: 768px) {
+    .whatsapp-float {
+      bottom: 16px;
+      right: 16px;
+    }
+  
+    .whatsapp-float a {
+      width: 60px;
+      height: 60px;
+    }
+  
+    .whatsapp-icon {
+      width: 34px;
+      height: 34px;
+    }
+  }
+  

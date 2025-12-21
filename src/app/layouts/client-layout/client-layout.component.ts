@@ -2,11 +2,12 @@ import { Component } from '@angular/core';
 import { ClientNavComponent } from "../../clientComponents/client-nav/client-nav.component";
 import { RouterOutlet } from "@angular/router";
 import { ClientFooterComponent } from "../../clientComponents/client-footer/client-footer.component";
+import { WhatappComponent } from "../../clientComponents/whatapp/whatapp.component";
 
 @Component({
   selector: 'app-client-layout',
   standalone: true,
-  imports: [ClientNavComponent, RouterOutlet, ClientFooterComponent],
+  imports: [ClientNavComponent, RouterOutlet, ClientFooterComponent, WhatappComponent],
   templateUrl: './client-layout.component.html',
   styleUrl: './client-layout.component.css'
 })
