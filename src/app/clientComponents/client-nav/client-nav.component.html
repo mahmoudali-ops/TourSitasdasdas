@@ -68,44 +68,81 @@
   <!-- Hamburger Button for Mobile -->
 
 <!-- Offcanvas Menu -->
-<div class="offcanvas-overlay" (click)="closeOffcanvas()" [class.active]="isOffcanvasOpen"></div>
+<!-- Overlay -->
+<div
+  class="offcanvas-overlay"
+  [class.active]="isOffcanvasOpen"
+  (click)="closeOffcanvas()"
+  (touchstart)="closeOffcanvas()">
+</div>
 
+<!-- Offcanvas Menu -->
 <div class="offcanvas-menu" [class.active]="isOffcanvasOpen">
+  
+  <!-- Header -->
   <div class="offcanvas-header">
-    <a class="logo" routerLink="/" (click)="closeOffcanvas()">
+    <a class="logo" routerLink="/" (click)="closeOffcanvas()" (touchstart)="closeOffcanvas()">
       <img src="assets/images/toppicktravel-removebg-preview.png" alt="Logo" />
     </a>
-    <button class="close-btn" (click)="closeOffcanvas()">&times;</button>
+
+    <button
+      type="button"
+      class="close-btn"
+      (click)="closeOffcanvas()"
+      (touchstart)="closeOffcanvas()">
+      &times;
+    </button>
   </div>
 
+  <!-- Links -->
   <ul class="offcanvas-links">
-    <li><a routerLink="/" routerLinkActive="active-link" (click)="closeOffcanvas()">{{ 'NAV.HOME' | t }}</a></li>
-    
-    <!-- Hurghada Tours Dropdown -->
+    <li>
+      <a routerLink="/" routerLinkActive="active-link"
+         (click)="closeOffcanvas()"
+         (touchstart)="closeOffcanvas()">
+        {{ 'NAV.HOME' | t }}
+      </a>
+    </li>
+
+    <!-- Hurghada Dropdown -->
     <li class="offcanvas-dropdown">
-      <a class="dropdown-toggle" (click)="toggleDropdown($event, 'hurghada')">
+      <button
+        type="button"
+        class="dropdown-toggle"
+        (click)="toggleDropdown($event, 'hurghada')"
+        (touchstart)="toggleDropdown($event, 'hurghada')">
         {{ 'NAV.HURGHADA_TOURS' | t }}
         <i class="fas fa-chevron-down"></i>
-      </a>
+      </button>
+
       <ul class="dropdown-submenu" [class.open]="activeDropdown === 'hurghada'">
-        <li><a [routerLink]="['/categrytourDetail', 38]" (click)="closeOffcanvas()">{{ 'NAV.CAIRO_TOURS' | t }}</a></li>
-        <li><a [routerLink]="['/categrytourDetail', 39]" (click)="closeOffcanvas()">{{ 'NAV.LUXOR_TOURS' | t }}</a></li>
-        <li><a [routerLink]="['/categrytourDetail', 40]" (click)="closeOffcanvas()">{{ 'NAV.SAFARI_TOURS' | t }}</a></li>
-        <li><a [routerLink]="['/categrytourDetail', 28]" (click)="closeOffcanvas()">{{ 'NAV.SEA_TOURS' | t }}</a></li>
-        <li><a [routerLink]="['/categrytourDetail', 37]" (click)="closeOffcanvas()">Diving</a></li>
-        <li><a [routerLink]="['/categrytourDetail', 34]" (click)="closeOffcanvas()">{{ 'NAV.THINGS_TO_DO_HURGHADA' | t }}</a></li>
+        <li><a [routerLink]="['/categrytourDetail', 38]" (click)="closeOffcanvas()" (touchstart)="closeOffcanvas()">{{ 'NAV.CAIRO_TOURS' | t }}</a></li>
+        <li><a [routerLink]="['/categrytourDetail', 39]" (click)="closeOffcanvas()" (touchstart)="closeOffcanvas()">{{ 'NAV.LUXOR_TOURS' | t }}</a></li>
+        <li><a [routerLink]="['/categrytourDetail', 40]" (click)="closeOffcanvas()" (touchstart)="closeOffcanvas()">{{ 'NAV.SAFARI_TOURS' | t }}</a></li>
+        <li><a [routerLink]="['/categrytourDetail', 28]" (click)="closeOffcanvas()" (touchstart)="closeOffcanvas()">{{ 'NAV.SEA_TOURS' | t }}</a></li>
+        <li><a [routerLink]="['/categrytourDetail', 37]" (click)="closeOffcanvas()" (touchstart)="closeOffcanvas()">Diving</a></li>
+        <li><a [routerLink]="['/categrytourDetail', 34]" (click)="closeOffcanvas()" (touchstart)="closeOffcanvas()">{{ 'NAV.THINGS_TO_DO_HURGHADA' | t }}</a></li>
       </ul>
     </li>
-    <li><a routerLink="transfer" routerLinkActive="active-link" (click)="closeOffcanvas()"> {{ 'NAV.TRANSFERS' | t }}</a></li>
-    <li><a routerLink="/" (click)="closeOffcanvas()">{{ 'NAV.BLOGS' | t }}</a></li>
-    <li><a routerLink="/" (click)="closeOffcanvas()">{{ 'NAV.REVIEWS' | t }}</a></li>
-    <li><a routerLink="/about" (click)="closeOffcanvas()">{{ 'NAV.ABOUT' | t }}</a></li>
+
+    <li>
+      <a routerLink="/transfer"
+         (click)="closeOffcanvas()"
+         (touchstart)="closeOffcanvas()">
+        {{ 'NAV.TRANSFERS' | t }}
+      </a>
+    </li>
+
+    <li><a routerLink="/" (click)="closeOffcanvas()" (touchstart)="closeOffcanvas()">{{ 'NAV.BLOGS' | t }}</a></li>
+    <li><a routerLink="/" (click)="closeOffcanvas()" (touchstart)="closeOffcanvas()">{{ 'NAV.REVIEWS' | t }}</a></li>
+    <li><a routerLink="/about" (click)="closeOffcanvas()" (touchstart)="closeOffcanvas()">{{ 'NAV.ABOUT' | t }}</a></li>
   </ul>
 
-  <!-- Social Icons in Offcanvas -->
+  <!-- Social -->
   <div class="offcanvas-social">
-    <a href="https://www.facebook.com/share/1Aatp9uunF/?mibextid=wwXIfr"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://www.facebook.com/share/1Aatp9uunF/?mibextid=wwXIfr" target="_blank"><i class="fab fa-facebook-f"></i></a>
     <a href="#"><i class="fab fa-twitter"></i></a>
     <a href="#"><i class="fab fa-instagram"></i></a>
   </div>
+
 </div>

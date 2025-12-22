@@ -12,94 +12,104 @@ import { TranslationService } from '../../core/services/translation.service';
   styleUrl: './client-nav.component.css'
 })
 export class ClientNavComponent implements OnInit {
-  isScrolledd = false;
   isBrowser = typeof window !== 'undefined';
-
-
-  @HostListener('window:scroll')
-  onScroll() {
-    if (!this.isBrowser) return;
-    this.isScrolledd = window.scrollY > 50;
-  }
 
   isScrolled = false;
   isOffcanvasOpen = false;
   activeDropdown: string | null = null;
-
-  @HostListener('window:scroll', [])
-  onWindowScroll() {
-    if (!this.isBrowser) return;
-
-    const scrollPosition = window.pageYOffset || document.documentElement.scrollTop || 0;
-    this.isScrolled = scrollPosition > 50;
-  }
-
-  ngOnInit() {
-    this.onWindowScroll();
-  }
-
-  // Toggle Offcanvas Menu
-  toggleOffcanvas() {
-    this.isOffcanvasOpen = !this.isOffcanvasOpen;
-    
-    // Prevent body scroll when offcanvas is open
-    if (this.isOffcanvasOpen) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'auto';
-      this.activeDropdown = null; // Close all dropdowns
-    }
-  }
-
-  // Close Offcanvas Menu
-  closeOffcanvas() {
-    this.isOffcanvasOpen = false;
-    document.body.style.overflow = 'auto';
-    this.activeDropdown = null;
-  }
-
-  // Toggle Dropdown
-  toggleDropdown(event: Event, dropdownName: string) {
-    event.preventDefault();
-    event.stopPropagation();
-    
-    if (this.activeDropdown === dropdownName) {
-      this.activeDropdown = null;
-    } else {
-      this.activeDropdown = dropdownName;
-    }
-  }
-
-  // Close offcanvas when clicking outside on mobile
-  @HostListener('document:click', ['$event'])
-  onDocumentClick(event: MouseEvent) {
-    const target = event.target as HTMLElement;
-    if (this.isOffcanvasOpen && window.innerWidth <= 991) {
-      if (!target.closest('.offcanvas-menu') && 
-          !target.closest('.hamburger-btn')) {
-        this.closeOffcanvas();
-      }
-    }
-  }
-
-  // Close offcanvas on escape key
-  @HostListener('document:keydown.escape')
-  onEscapeKey() {
-    if (this.isOffcanvasOpen) {
-      this.closeOffcanvas();
-    }
-  }
-  
-
 
   constructor(
     private langService: LanguageService,
     private translationService: TranslationService
   ) {}
 
-  changeLang(lang: 'en' | 'de' | 'nl') {
+  ngOnInit(): void {
+    this.onWindowScroll();
+  }
+
+  // ===============================
+  // Scroll Effect
+  // ===============================
+  @HostListener('window:scroll')
+  onWindowScroll(): void {
+    if (!this.isBrowser) return;
+
+    const scrollPosition =
+      window.pageYOffset || document.documentElement.scrollTop || 0;
+
+    this.isScrolled = scrollPosition > 50;
+  }
+
+  // ===============================
+  // Offcanvas Toggle
+  // ===============================
+  toggleOffcanvas(): void {
+    this.isOffcanvasOpen = !this.isOffcanvasOpen;
+
+    if (this.isOffcanvasOpen) {
+      // iOS SAFE way (instead of overflow: hidden)
+      document.body.style.position = 'fixed';
+      document.body.style.width = '100%';
+    } else {
+      this.resetBody();
+      this.activeDropdown = null;
+    }
+  }
+
+  closeOffcanvas(): void {
+    this.isOffcanvasOpen = false;
+    this.resetBody();
+    this.activeDropdown = null;
+  }
+
+  private resetBody(): void {
+    document.body.style.position = '';
+    document.body.style.width = '';
+  }
+
+  // ===============================
+  // Dropdown Toggle
+  // ===============================
+  toggleDropdown(event: Event, dropdownName: string): void {
+    event.preventDefault();
+    event.stopPropagation();
+
+    this.activeDropdown =
+      this.activeDropdown === dropdownName ? null : dropdownName;
+  }
+
+  // ===============================
+  // Close on Outside Click (Mobile)
+  // ===============================
+  @HostListener('document:click', ['$event'])
+  onDocumentClick(event: MouseEvent): void {
+    if (!this.isOffcanvasOpen || window.innerWidth > 991) return;
+
+    const target = event.target as HTMLElement;
+
+    if (
+      !target.closest('.offcanvas-menu') &&
+      !target.closest('.hamburger-btn')
+    ) {
+      this.closeOffcanvas();
+    }
+  }
+
+  // ===============================
+  // Close on ESC
+  // ===============================
+  @HostListener('document:keydown.escape')
+  onEscapeKey(): void {
+    if (this.isOffcanvasOpen) {
+      this.closeOffcanvas();
+    }
+  }
+
+  // ===============================
+  // Language Change
+  // ===============================
+  changeLang(lang: 'en' | 'de' | 'nl'): void {
     this.langService.setLanguage(lang);
-    // تحديث TranslationService أيضاً لضمان التزامن
     this.translationService.setLang(lang);
   }
 }

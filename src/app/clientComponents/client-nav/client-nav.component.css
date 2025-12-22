@@ -404,6 +404,7 @@
   color: white;
   cursor: pointer;
   display: flex;
+  right: 20px;
   align-items: center;
   justify-content: center;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -1272,4 +1273,43 @@ body.offcanvas-open {
 .close-btn:hover {
   background: linear-gradient(135deg, #ff7e5f, #feb47b);
   box-shadow: 0 10px 30px rgba(255, 126, 95, 0.6);
+}
+/* Dropdown Toggle Button */
+.offcanvas-dropdown .dropdown-toggle {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 18px 24px;
+  font-size: 17px;
+  font-weight: 600;
+
+  background: #0651e7;        /* الأزرق */
+  color: #ffffff;
+
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+
+  transition: background 0.3s ease, transform 0.2s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Hover / Active */
+.offcanvas-dropdown .dropdown-toggle:hover,
+.offcanvas-dropdown .dropdown-toggle:active {
+  background: #4380f9;
+}
+
+/* Icon */
+.offcanvas-dropdown .dropdown-toggle i {
+  font-size: 14px;
+  transition: transform 0.3s ease;
+}
+
+/* Rotate icon when open */
+.offcanvas-dropdown .dropdown-submenu.open + .dropdown-toggle,
+.offcanvas-dropdown .dropdown-toggle[aria-expanded="true"] i {
+  transform: rotate(180deg);
 }
