@@ -1,5 +1,5 @@
 import { CattourService } from './../../core/services/cattour.service';
-import {  ChangeDetectorRef, Component, CUSTOM_ELEMENTS_SCHEMA, HostListener, Inject, inject, OnDestroy, OnInit, PLATFORM_ID, signal, WritableSignal } from '@angular/core';
+import {  ChangeDetectorRef, Component, CUSTOM_ELEMENTS_SCHEMA, ElementRef, HostListener, Inject, inject, OnDestroy, OnInit, PLATFORM_ID, signal, ViewChild, WritableSignal } from '@angular/core';
 import { register } from 'swiper/element/bundle';
 import { Router, RouterLink } from "@angular/router";
 import { DestnatoinService } from '../../core/services/destnatoin.service';
@@ -97,7 +97,21 @@ export class HomeComponent  extends ReloadableComponent {
   
   
   // }
+  @ViewChild('heroVideo') heroVideo!: ElementRef<HTMLVideoElement>;
 
+  ngAfterViewInit() {
+    const video = this.heroVideo.nativeElement;
+  
+    video.muted = true;
+    video.volume = 0;
+    video.setAttribute('muted', '');
+    video.setAttribute('playsinline', '');
+  
+    video.play().catch(() => {
+      console.log('iOS autoplay blocked');
+    });
+  }
+  
 
 
 }
