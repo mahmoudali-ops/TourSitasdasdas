@@ -97,21 +97,22 @@ export class HomeComponent  extends ReloadableComponent {
   
   
   // }
+
   @ViewChild('heroVideo') heroVideo!: ElementRef<HTMLVideoElement>;
 
-  ngAfterViewInit() {
-    const video = this.heroVideo.nativeElement;
-  
-    video.muted = true;
-    video.volume = 0;
-    video.setAttribute('muted', '');
-    video.setAttribute('playsinline', '');
-  
-    video.play().catch(() => {
-      console.log('iOS autoplay blocked');
-    });
-  }
-  
+ngAfterViewInit() {
+  const video = this.heroVideo.nativeElement;
+
+  video.muted = true;
+  video.volume = 0;
+  video.setAttribute('muted', '');
+  video.setAttribute('playsinline', '');
+
+  video.play().catch(() => {
+    console.log('iOS autoplay blocked');
+  });
+}
+
 
 
 }
