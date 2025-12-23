@@ -48,13 +48,13 @@
         <div class="col-md-6 col-lg-4">
           <div class="tour-card-advanced">
 
-            <!-- Image -->
+            <!-- Image  -->
             <div class="tour-image-wrapper">
               <img [src]="tour.imageCover" class="tour-img pointer" alt="Tour" [routerLink]="['/tourDetail', tour.id]" />
 
               <div class="floating-labels">
-                <span class="f-label duration"><i class="fas fa-clock"></i> {{ tour.duration }}h</span>
-                <span class="f-label price"><i class="fas fa-dollar-sign"></i> {{ tour.price }}</span>
+                <span class="f-label duration"><i class="fas fa-clock"></i> {{ tour.duration }} h</span>
+                <span class="f-label price">€ {{ tour.price }}</span>
               </div>
             </div>
 
