@@ -38,7 +38,7 @@ export class TransfersDetailComponent  extends ReloadableComponent  {
     this.route.paramMap
       .pipe(
         switchMap(p =>
-          this.service.getDetaildedTransfers(+p.get('slug')!)
+          this.service.getDetaildedTransfers(p.get('slug')!)
         ),
         takeUntil(this.destroy$)
       )

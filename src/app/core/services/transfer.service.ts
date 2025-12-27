@@ -16,7 +16,7 @@ export class TransferService {
     getAllAdminTransfers():Observable<any>{
       return this.httpcleint.get(`${environment.BaseUrl}/api/Transfer/admin`);
     }
-    getDetaildedTransfers(slug:number|null):Observable<any>{
+    getDetaildedTransfers(slug:string|null):Observable<any>{
       return this.httpcleint.get(`${environment.BaseUrl}/api/Transfer/${slug}`);
     }
 

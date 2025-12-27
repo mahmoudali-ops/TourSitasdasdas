@@ -25,7 +25,7 @@ export class TourService {
   }
   
 
-  getDetaildedTOur(slug:number|null):Observable<any>{
+  getDetaildedTOur(slug:string|null):Observable<any>{
     return this.httpcleint.get(`${environment.BaseUrl}/api/Tours/${slug}`);
   }
   createTour(data:FormData):Observable<any>{

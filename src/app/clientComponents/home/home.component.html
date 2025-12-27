@@ -108,7 +108,7 @@
     >
       @for (category of AllPopularHurghadaCat(); track category.id ) {
        @if(isBrowser){
-        <swiper-slide [routerLink]="['/categrytourDetail', category.id]" class="pointer">
+        <swiper-slide [routerLink]="['/categrytourDetail', category.slug]" class="pointer">
           <div class="simple-vertical-slide">
             <div class="slide-bg-image">
               <img [src]="category.imageCover" [alt]="category.titles" loading="lazy">
@@ -506,7 +506,7 @@ swiper-slide-active h3 {
       <div class="row">
         @for (tour of AllPopularToursList().slice(0,8); track tour.id){
           <div class="col-12 col-sm-6 col-lg-3 mb-4">
-            <a [routerLink]="['/tourDetail', tour.id]" class="destination-card-new">
+            <a [routerLink]="['/tourDetail', tour.slug]" class="destination-card-new">
               <div class="destination-image-new">
                 <img [src]="tour.imageCover" [alt]="tour.titles" class="img-fluid">
                 <div class="destination-overlay-new">

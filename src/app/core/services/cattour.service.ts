@@ -18,7 +18,7 @@ private readonly httpClient=inject(HttpClient);
       return this.httpClient.get(`${environment.BaseUrl}/api/CategorTour/admin`);
     }
 
-    getDetaildedCategorTour(slug:number|null):Observable<any>{
+    getDetaildedCategorTour(slug:string |null):Observable<any>{
       return this.httpClient.get(`${environment.BaseUrl}/api/CategorTour/${slug}`);
     }
 
