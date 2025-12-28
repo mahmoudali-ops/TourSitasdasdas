@@ -86,7 +86,7 @@ export class HomeComponent  extends ReloadableComponent {
       t.destinationName?.toLowerCase() === 'hurghada'
     );
   }
-  
+  @ViewChild('swiper', { static: false }) swiperEl!: ElementRef;
 
   @ViewChild('heroVideo') heroVideo!: ElementRef<HTMLVideoElement>;
 videoFallback = false;
@@ -95,7 +95,9 @@ ngAfterViewInit() {
   if (!isPlatformBrowser(this.platformId) || !this.heroVideo) {
     return;
   }
-
+  setTimeout(() => {
+    this.swiperEl.nativeElement.swiper.update();
+  }, 0);
   const video = this.heroVideo.nativeElement;
 
   video.setAttribute('muted', '');
@@ -129,4 +131,7 @@ ngAfterViewInit() {
     this.videoFallback = true;
   });
 }
+
+
+
 }
