@@ -93,7 +93,7 @@ export const NL = {
       TITLE: 'O nas',
       INTRO: 'TopPicks Travels to wiodąca firma turystyczna oferująca niezapomniane doświadczenia podróżnicze w Egipcie i na całym świecie.',
       DESCRIPTION: 'Od 2010 roku wierzymy, że każda podróż opowiada historię, a każda przygoda tworzy trwałe wspomnienia. Łączymy najwyższej jakości obsługę z nowoczesnymi doświadczeniami podróżniczymi.',
-      FEATURES: {
+       FEATURES: {
         CUSTOMERS: 'Ponad 50 000 zadowolonych klientów',
         GUIDES: 'Profesjonalni i doświadczeni przewodnicy wycieczek',
         TRIPS: 'Wycieczki dostosowane do każdego budżetu'
