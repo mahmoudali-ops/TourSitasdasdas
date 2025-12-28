@@ -39,7 +39,7 @@
     
   
    
-  <!-- الأقسا م الجديدة تحت الـ Carousel -->
+   <!-- الأقسا م الجديدة تحت الـ Carousel -->
   <section class="about-section py-5">
     <div class="container">
       <div class="row align-items-center">
@@ -93,19 +93,21 @@
     </div>
 
     <!-- Swiper العمودي المبسط -->
-    <swiper-container 
-      class="simple-vertical-swiper"
-      direction="vertical"
-      pagination="true"
-      pagination-clickable="true"
-      space-between="15"
-      slides-per-view="2"
-      autoplay-delay="3000"
-      autoplay-disable-on-interaction="false"
-      loop="true"
-      speed="800"
-      centered-slides="true"
-    >
+    <swiper-container
+    *ngIf="AllPopularHurghadaCat().length >= 6 && isBrowser"
+    class="simple-vertical-swiper"
+    direction="vertical"
+    pagination="true"
+    pagination-clickable="true"
+    space-between="15"
+    slides-per-view="2"
+    autoplay-delay="3000"
+    autoplay-disable-on-interaction="false"
+    loop="true"
+    speed="800"
+    centered-slides="true"
+  >
+  
       @for (category of AllPopularHurghadaCat(); track category.id ) {
        @if(isBrowser){
         <swiper-slide [routerLink]="['/categrytourDetail', category.slug]" class="pointer">

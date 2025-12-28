@@ -10,7 +10,7 @@ import { ITour } from '../../core/interfaces/itour';
 import { HttpErrorResponse } from '@angular/common/http';
 import { ICatTour } from '../../core/interfaces/icat-tour';
 import { TermtextPipe } from '../../core/pipes/termtext.pipe';
-import { isPlatformBrowser, NgClass } from '@angular/common';
+import { CommonModule, isPlatformBrowser, NgClass } from '@angular/common';
 import { ClientFooterComponent } from "../client-footer/client-footer.component";
 import { ReloadableComponent } from '../reloadable/reloadable.component';
 import { ReloadService } from '../../core/services/reload.service';
@@ -21,7 +21,7 @@ register();
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [RouterLink, TranslatedPipe, ClientFooterComponent],
+  imports: [RouterLink, TranslatedPipe, ClientFooterComponent,CommonModule],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],   // ← ← المهم هنا
 
   templateUrl: './home.component.html',
