@@ -31,6 +31,10 @@ import { CreateTransferComponent } from './adminCompoents/create-transfer/create
 import { UpdateTransferComponent } from './adminCompoents/update-transfer/update-transfer.component';
 import { authGuardGuard } from './core/guards/auth-guard.guard';
 import { AboutComponent } from './clientComponents/about/about.component';
+import { ReviewsComponent } from './clientComponents/reviews/reviews.component';
+import { BlogsComponent } from './clientComponents/blogs/blogs.component';
+import { HurghadablogsComponent } from './clientComponents/hurghadablogs/hurghadablogs.component';
+import { LuxorblogComponent } from './clientComponents/luxorblog/luxorblog.component';
 
 export const routes: Routes = [
     {
@@ -42,7 +46,10 @@ export const routes: Routes = [
             {path: 'tourDetail/:slug',component:TOurDetailComponent,title: 'Tour Details' },
             {path: 'transferDetail/:slug',component:TransfersDetailComponent,title: 'Transfers Details' },
             {path: 'categrytourDetail/:slug',component:CategoryTourDetailComponent,title: 'Tours Category Details' },
-            {path: 'faq',component:FaqComponent,title: 'FAQ' },
+            {path: 'reviews',component:ReviewsComponent,title: 'Reviews' },
+            {path: 'hurghadaBlog',component:HurghadablogsComponent,title: 'Hurghada Blogs' },
+            {path: 'luxorBlog',component:LuxorblogComponent,title: 'Luxor Blogs' },
+            {path: 'blogs',component:BlogsComponent,title: 'Our Blogs' },
             {path: 'about',component:AboutComponent,title: 'About' },
         ] 
     },

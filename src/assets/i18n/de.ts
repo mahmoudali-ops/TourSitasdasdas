@@ -98,6 +98,79 @@ export const DE = {
       },
       BUTTON: 'Mehr erfahren'
     }
-    
-    
+    ,
+    Review: 'Lesen Sie, was unsere Reisenden sagen – und teilen Sie Ihre eigenen Erfahrungen mit uns!',
+
+    BLOGS: {
+    TITLE: "Reiseblog",
+    SUBTITLE: "Inspirierende Reisegeschichten, Tipps und Reiseführer von TopPicksTravels",
+    READ_MORE: "Mehr lesen →",
+    CATEGORY: {
+      TRAVEL_TIPS: "Reisetipps",
+      HISTORY: "Geschichte",
+      ADVENTURE: "Abenteuer"
+    },
+    HURGHADA: {
+      TITLE: "Top-Aktivitäten in Hurghada",
+      EXCERPT: "Entdecken Sie die besten Aktivitäten in Hurghada, vom Schnorcheln und Tauchen bis zu Wüstensafaris und Inselausflügen."
+    },
+    LUXOR: {
+      TITLE: "Warum Luxor das größte Freilichtmuseum der Welt ist",
+      EXCERPT: "Erkunden Sie die antiken Wunder von Luxor, einschließlich Karnak-Tempel, Tal der Könige und mehr."
+    }
+  }
+    ,
+    HURGHADA_BLOG: {
+      TITLE: "Hurghada Rotes Meer, Ägypten - Top Aktivitäten",
+      SUBTITLE: "Entdecken Sie die besten Strände, Tauchplätze, Resorts und kulturellen Erlebnisse in Hurghada mit TopPicksTravels",
+      INTRO_TITLE: "Überblick über die Stadt Hurghada",
+      INTRO_TEXT: "Hurghada ist eines der beliebtesten Reiseziele Ägyptens an der Küste des Roten Meeres. Bekannt für türkisfarbenes Wasser, goldene Sandstrände, lebhaftes Nachtleben und luxuriöse Resorts, zieht Hurghada Reisende aus aller Welt an. Egal, ob Sie tauchen, schnorcheln, Wüstenabenteuer erleben oder einfach am Roten Meer entspannen möchten – Hurghada bietet alles für einen unvergesslichen Urlaub.",
+      WHERE_TO_STAY_TITLE: "Unterkünfte in Hurghada",
+      WHERE_TO_STAY_TEXT: "Hurghada bietet eine große Auswahl an Unterkünften, darunter Luxushotels, 5-Sterne-Resorts, Boutique-Hotels und preiswerte Optionen. Viele Resorts bieten All-Inclusive-Pakete mit Privatstränden, Pools, Spa-Einrichtungen und Restaurants mit ägyptischer, mediterraner und internationaler Küche. Beliebte Gegenden sind Sahl Hasheesh, El Gouna und das Stadtzentrum. Viele Hotels organisieren auch geführte Touren nach Luxor, Kairo und in die Wüste.",
+      WHAT_TO_DO_TITLE: "Aktivitäten in Hurghada",
+      FOOD_TITLE: "Lokale und internationale Küche",
+      FOOD_TEXT: "Hurghada bietet eine vielfältige Gastronomie mit Restaurants, die ägyptische Spezialitäten, frische Meeresfrüchte, asiatische Gerichte und internationale Küche servieren. Beliebte Orte sind White Elephant, StarFish, Nubian Café und lokale Straßenmärkte mit authentischen ägyptischen Aromen. Genießen Sie köstliches Essen mit Blick auf das Meer.",
+      SCUBA_TITLE: "Tauchen & Schnorcheln",
+      SCUBA_TEXT: "Hurghada gehört zu den weltweit besten Tauchzielen. Sie können PADI-Kurse, Wracktauchen, Nachttauchen oder Schnorcheln zwischen lebendigen Korallenriffen und exotischen Meeresbewohnern genießen. Tauchgänge sind für Anfänger und erfahrene Taucher gleichermaßen geeignet.",
+      QUAD_TITLE: "Quad-Bike-Safari in der Wüste",
+      QUAD_TEXT: "Erleben Sie die ägyptische Wüste auf einer spannenden Quad-Bike-Safari. Besuchen Sie Beduinendörfer, genießen Sie lokale arabische Küche, reiten Sie auf Kamelen und probieren Sie Dune-Surfing. Ein erfahrener Guide sorgt für Sicherheit und unvergessliche Erlebnisse.",
+      OTHER_TITLE: "Weitere Aktivitäten in Hurghada",
+      ACTIVITY_1: "Windsurfen, Kitesurfen und Jet-Skis",
+      ACTIVITY_2: "Ausflüge nach Luxor oder Kairo",
+      ACTIVITY_3: "Besuch des Klosters St. Anthony und St. Paul",
+      ACTIVITY_4: "Strandaktivitäten und Entspannung",
+      ACTIVITY_5: "Schnorchelausflüge zu den Roten Meer Inseln",
+      BEACHES_TITLE: "Schöne Strände in Hurghada",
+      BEACHES_TEXT: "Hurghada ist berühmt für Strände wie Makadi Bay, Sahl Hasheesh und Giftun Islands. Genießen Sie Sonnenbaden, Schwimmen und Wassersport in kristallklarem Wasser. Perfekt für Familien, Paare und Alleinreisende.",
+      DIVING_TOURS_TITLE: "Tauchgänge im Roten Meer",
+      DIVING_TOURS_TEXT: "Entdecken Sie einige der schönsten Korallenriffe, Schiffswracks und Meeresschutzgebiete der Welt. Tauchgänge im Roten Meer in Hurghada bieten einzigartige Erlebnisse mit erfahrenen Instruktoren, geeignet für alle Erfahrungsstufen.",
+      LOCAL_MARKETS_TITLE: "Lokale Märkte erkunden",
+      LOCAL_MARKETS_TEXT: "Die lokalen Märkte in Hurghada, wie der Hurghada Marina Market, bieten Souvenirs, Handwerkskunst, Gewürze und ägyptische Spezialitäten. Ein Besuch ist ein kulturelles Highlight für jede Reise.",
+      CONCLUSION_TITLE: "Planen Sie Ihre Hurghada-Reise",
+      CONCLUSION_TEXT: "Hurghada bietet die perfekte Kombination aus Abenteuer, Entspannung und kulturellen Erlebnissen. Von Luxusresorts über Wüstensafaris bis hin zu Tauchen und lokaler Küche – jeder Reisende findet etwas Unvergessliches. Buchen Sie Ihre Reise mit TopPicksTravels für einen Traumurlaub am Roten Meer."
+    }
+    ,
+    LUXOR_BLOG: {
+      TITLE: "Luxor Ägypten - Entdecken Sie antike Wunder und Touren",
+      SUBTITLE: "Entdecken Sie Tempel, Nilkreuzfahrten, Museen und kulturelle Erlebnisse in Luxor mit TopPicksTravels",
+      INTRO_TITLE: "Überblick über die Stadt Luxor",
+      INTRO_TEXT: "Luxor, bekannt als das größte Freilichtmuseum der Welt, ist eines der Top-Reiseziele Ägyptens. Am Nil gelegen, bietet Luxor antike Tempel, Gräber, Monumente und eine reiche Geschichte, die Tausende von Jahren zurückreicht. Besucher können geführte Touren genießen, archäologische Stätten erkunden oder am Nil entspannen und die ägyptische Kultur erleben.",
+      WHERE_TO_STAY_TITLE: "Unterkünfte in Luxor",
+      WHERE_TO_STAY_TEXT: "Luxor bietet eine große Auswahl an Hotels und Resorts für jedes Budget, von luxuriösen Hotels mit Nilblick bis zu Boutique-Hotels. Viele bieten All-Inclusive-Pakete, Pools, Nilblick-Terrassen und einfachen Zugang zu Tempeln und Museen. Beliebte Gebiete sind Westbank, Ostbank und das Stadtzentrum.",
+      WHAT_TO_DO_TITLE: "Aktivitäten in Luxor",
+      TEMPLE_TITLE: "Besuch der Tempel",
+      TEMPLE_TEXT: "Besuchen Sie weltberühmte Tempel wie den Karnak-Tempel, den Luxor-Tempel und den Tempel der Hatschepsut. Diese beeindruckenden antiken Bauwerke zeigen ägyptische Architektur, Hieroglyphen und kulturelles Erbe.",
+      NILE_CRUISE_TITLE: "Nilkreuzfahrten",
+      NILE_CRUISE_TEXT: "Erleben Sie eine malerische Nilkreuzfahrt und genießen Sie den Blick auf Tempel, Palmenhaine und antike Monumente. Kreuzfahrten bieten Tagesausflüge, Sonnenuntergangstouren und luxuriöse Übernachtungen auf traditionellen Felukkas oder modernen Booten.",
+      MUSEUM_TITLE: "Luxor Museen",
+      MUSEUM_TEXT: "Besuchen Sie das Luxor-Museum und das Mumifizierungs-Museum, um Artefakte, königliche Schätze, Statuen und Einblicke in das Leben im alten Ägypten zu entdecken.",
+      OTHER_TITLE: "Weitere Aktivitäten",
+      ACTIVITY_1: "Heißluftballonfahrten über den Nil",
+      ACTIVITY_2: "Kutschfahrten durch die Stadt",
+      ACTIVITY_3: "Einkauf auf Luxor Souks und Märkten",
+      ACTIVITY_4: "Kulturelle Workshops und lokale Aufführungen",
+      ACTIVITY_5: "Tagesausflüge ins Tal der Könige",
+      CONCLUSION_TITLE: "Planen Sie Ihre Luxor-Reise",
+      CONCLUSION_TEXT: "Luxor bietet die perfekte Mischung aus Abenteuer, Geschichte und Kultur. Vom Erkunden der Tempel und Gräber bis zu Nilkreuzfahrten und lokalen Märkten – jeder Reisende findet ein unvergessliches Erlebnis. Buchen Sie Ihre Luxor-Reise mit TopPicksTravels."
+    }
   };

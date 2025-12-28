@@ -100,4 +100,77 @@ export const NL = {
       },
       BUTTON: 'Dowiedz się więcej'
     }
+    ,
+    Review: 'Przeczytaj, co mówią nasi podróżnicy — i podziel się z nami własnymi doświadczeniami!',
+
+    BLOGS: {
+      TITLE: "Blog podróżniczy",
+      SUBTITLE: "Inspirujące historie podróżnicze, porady i przewodniki od TopPicksTravels",
+      READ_MORE: "Czytaj więcej →",
+      CATEGORY: {
+        TRAVEL_TIPS: "Porady podróżnicze",
+        HISTORY: "Historia",
+        ADVENTURE: "Przygoda"
+      },
+      HURGHADA: {
+        TITLE: "Najlepsze atrakcje w Hurghadzie",
+        EXCERPT: "Odkryj najlepsze atrakcje w Hurghadzie, od nurkowania i snorkelingu po safari na pustyni i wycieczki na wyspy."
+      },
+      LUXOR: {
+        TITLE: "Dlaczego Luksor jest największym muzeum na świeżym powietrzu",
+        EXCERPT: "Odkryj starożytne cuda Luksoru, w tym Świątynię Karnak, Dolinę Królów i wiele innych."
+      }
+    },
+    HURGHADA_BLOG: {
+      TITLE: "Hurghada Morze Czerwone, Egipt - Najlepsze Atrakcje",
+      SUBTITLE: "Odkryj najlepsze plaże, miejsca do nurkowania, luksusowe ośrodki i atrakcje kulturalne w Hurghadzie z TopPicksTravels",
+      INTRO_TITLE: "Przegląd miasta Hurghada",
+      INTRO_TEXT: "Hurghada jest jednym z najpopularniejszych miejsc turystycznych w Egipcie, położonym nad Morzem Czerwonym. Znana z turkusowych wód, złotych plaż, tętniącego życiem nocnego życia i luksusowych ośrodków, przyciąga turystów z całego świata. Niezależnie od tego, czy chcesz nurkować, snorkelingować, odkrywać pustynię czy po prostu odpoczywać nad Morzem Czerwonym, Hurghada oferuje wszystko, aby Twój urlop był niezapomniany.",
+      WHERE_TO_STAY_TITLE: "Gdzie zatrzymać się w Hurghadzie",
+      WHERE_TO_STAY_TEXT: "Hurghada oferuje szeroki wybór zakwaterowania, w tym luksusowe kurorty, hotele 5-gwiazdkowe, hotele butikowe i opcje ekonomiczne. Wiele ośrodków oferuje pakiety all-inclusive z prywatnymi plażami, basenami, spa i restauracjami serwującymi kuchnię egipską, śródziemnomorską i międzynarodową. Popularne dzielnice to Sahl Hasheesh, El Gouna i centrum miasta. Wiele hoteli organizuje także wycieczki do Luxoru, Kairu i na pustynię.",
+      WHAT_TO_DO_TITLE: "Atrakcje w Hurghadzie",
+      FOOD_TITLE: "Lokalna i międzynarodowa kuchnia",
+      FOOD_TEXT: "Hurghada oferuje różnorodną gastronomię z restauracjami serwującymi egipskie specjały, świeże owoce morza, dania azjatyckie i kuchnię międzynarodową. Warto odwiedzić White Elephant, StarFish, Nubian Café oraz lokalne targi z autentycznymi egipskimi smakami. Posiłki można połączyć z pięknymi widokami na morze.",
+      SCUBA_TITLE: "Nurkowanie & Snorkeling",
+      SCUBA_TEXT: "Hurghada jest jednym z najlepszych miejsc do nurkowania na świecie. Możesz uczestniczyć w kursach PADI, nurkowaniach wrakowych, nocnych lub snorkelingu wśród kolorowych raf koralowych i egzotycznych ryb. Nurkowania są odpowiednie dla początkujących i doświadczonych nurków.",
+      QUAD_TITLE: "Safari na quadach po pustyni",
+      QUAD_TEXT: "Przeżyj ekscytujące safari na quadach po egipskiej pustyni. Odwiedź wioski Beduinów, spróbuj lokalnej arabskiej kuchni, przejażdżki na wielbłądach i Dune Surfing. Profesjonalny przewodnik zapewni bezpieczeństwo i niezapomniane przeżycia.",
+      OTHER_TITLE: "Inne atrakcje w Hurghadzie",
+      ACTIVITY_1: "Windsurfing, Kitesurfing i skutery wodne",
+      ACTIVITY_2: "Wycieczki do Luxoru lub Kairu",
+      ACTIVITY_3: "Wizyta w klasztorze Św. Antoniego i Św. Pawła",
+      ACTIVITY_4: "Atrakcje plażowe i relaks",
+      ACTIVITY_5: "Wycieczki snorkelingowe na Wyspy Morza Czerwonego",
+      BEACHES_TITLE: "Piękne plaże w Hurghadzie",
+      BEACHES_TEXT: "Hurghada słynie z czystych plaż, takich jak Makadi Bay, Sahl Hasheesh i Wyspy Giftun. Ciesz się opalaniem, pływaniem i sportami wodnymi w krystalicznie czystych wodach. Idealne dla rodzin, par i podróżników indywidualnych.",
+      DIVING_TOURS_TITLE: "Wycieczki nurkowe po Morzu Czerwonym",
+      DIVING_TOURS_TEXT: "Odkryj jedne z najpiękniejszych raf koralowych, wraków statków i rezerwatów morskich na świecie. Wycieczki nurkowe w Hurghadzie oferują wyjątkowe doświadczenia z wykwalifikowanymi instruktorami, odpowiednie dla każdego poziomu zaawansowania.",
+      LOCAL_MARKETS_TITLE: "Odkryj lokalne targi",
+      LOCAL_MARKETS_TEXT: "Lokalne targi w Hurghadzie, takie jak Hurghada Marina Market, oferują mieszankę pamiątek, rękodzieła, przypraw i egipskich przysmaków. Odwiedziny to kulturowa atrakcja, której nie można przegapić.",
+      CONCLUSION_TITLE: "Zaplanuj swoją podróż do Hurghady",
+      CONCLUSION_TEXT: "Hurghada oferuje idealne połączenie przygody, relaksu i doświadczeń kulturowych. Od luksusowych ośrodków, przez safari na pustyni, nurkowanie i lokalną kuchnię – każdy podróżnik znajdzie tu coś niezapomnianego. Zarezerwuj swoją podróż z TopPicksTravels i ciesz się wymarzonym urlopem nad Morzem Czerwonym."
+    },
+    LUXOR_BLOG: {
+      TITLE: "Luxor Egipt - Odkryj starożytne cuda i wycieczki",
+      SUBTITLE: "Odkryj świątynie, rejsy po Nilu, muzea i atrakcje kulturalne w Luxorze z TopPicksTravels",
+      INTRO_TITLE: "Przegląd miasta Luxor",
+      INTRO_TEXT: "Luxor, znany jako największe muzeum na świeżym powietrzu na świecie, jest jednym z najlepszych miejsc turystycznych w Egipcie. Położony nad Nilem, Luxor oferuje starożytne świątynie, grobowce, zabytki i bogatą historię sięgającą tysięcy lat. Turyści mogą korzystać z wycieczek z przewodnikiem, zwiedzać stanowiska archeologiczne lub relaksować się nad Nilem, poznając egipską kulturę.",
+      WHERE_TO_STAY_TITLE: "Gdzie zatrzymać się w Luxorze",
+      WHERE_TO_STAY_TEXT: "Luxor oferuje szeroki wybór hoteli i ośrodków na różne budżety, od luksusowych hoteli z widokiem na Nil po hotele butikowe. Wiele z nich oferuje pakiety all-inclusive, baseny, tarasy z widokiem na Nil i łatwy dostęp do świątyń i muzeów. Popularne obszary to West Bank, East Bank i centrum miasta.",
+      WHAT_TO_DO_TITLE: "Atrakcje w Luxorze",
+      TEMPLE_TITLE: "Zwiedzanie świątyń",
+      TEMPLE_TEXT: "Odkryj światowej sławy świątynie, takie jak Świątynia Karnak, Świątynia w Luxorze i Świątynia Hatszepsut. Te wspaniałe budowle prezentują egipską architekturę, hieroglify i dziedzictwo kulturowe.",
+      NILE_CRUISE_TITLE: "Rejsy po Nilu",
+      NILE_CRUISE_TEXT: "Doświadcz malowniczego rejsu po Nilu, podziwiając świątynie, gaje palmowe i starożytne zabytki. Rejsy oferują wycieczki jednodniowe, zachody słońca oraz luksusowe noclegi na tradycyjnych felukach lub nowoczesnych łodziach.",
+      MUSEUM_TITLE: "Muzea w Luxorze",
+      MUSEUM_TEXT: "Odwiedź Muzeum w Luxorze i Muzeum Mumifikacji, aby odkryć artefakty, królewskie skarby, posągi i wgląd w życie starożytnych Egipcjan.",
+      OTHER_TITLE: "Inne atrakcje",
+      ACTIVITY_1: "Loty balonem nad Nilem",
+      ACTIVITY_2: "Przejażdżki powozem po mieście",
+      ACTIVITY_3: "Zakupy na lokalnych bazarach i soukach",
+      ACTIVITY_4: "Warsztaty kulturalne i lokalne występy",
+      ACTIVITY_5: "Wycieczki jednodniowe do Doliny Królów",
+      CONCLUSION_TITLE: "Zaplanuj swoją podróż do Luxoru",
+      CONCLUSION_TEXT: "Luxor oferuje idealne połączenie przygody, historii i kultury. Od zwiedzania świątyń i grobowców po rejsy po Nilu i lokalne targi – każdy podróżnik znajdzie tu niezapomniane doświadczenia. Zarezerwuj swoją podróż z TopPicksTravels i zanurz się w ponadczasowych cudach Egiptu."
+    }
   };

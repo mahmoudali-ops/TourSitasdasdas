@@ -27,8 +27,8 @@
 
    
         <li><a routerLink="transfer"routerLinkActive="active-link"> {{ 'NAV.TRANSFERS' | t }}</a></li>
-        <li><a routerLink="/"routerLinkActive="active-link">{{ 'NAV.BLOGS' | t }}</a></li>
-        <li><a routerLink="/"routerLinkActive="active-link">{{ 'NAV.REVIEWS' | t }}</a></li>
+        <li><a routerLink="/blogs"routerLinkActive="active-link">{{ 'NAV.BLOGS' | t }}</a></li>
+        <li><a routerLink="/reviews"routerLinkActive="active-link">{{ 'NAV.REVIEWS' | t }}</a></li>
         <li><a routerLink="/about"routerLinkActive="active-link">{{ 'NAV.ABOUT' | t }}</a></li>
       </ul>
       <div class="language-switcher">
@@ -78,7 +78,7 @@
 <div class="offcanvas-menu" [class.active]="isOffcanvasOpen">
   <div class="offcanvas-header">
     <a class="logo" routerLink="/" (click)="closeOffcanvas()">
-      <img src="assets/images/toppicktravel-removebg-preview.png" alt="Logo" />
+      <img src="assets/images/toppicktravel-removebg-preview2.png" alt="Logo" />
     </a>
     <button class="close-btn" (click)="closeOffcanvas()">&times;</button>
   </div>
@@ -107,8 +107,8 @@
     </li>
 
     <li><a routerLink="transfer" routerLinkActive="active-link" (click)="closeOffcanvas()"> {{ 'NAV.TRANSFERS' | t }}</a></li>
-    <li><a routerLink="/" (click)="closeOffcanvas()">{{ 'NAV.BLOGS' | t }}</a></li>
-    <li><a routerLink="/" (click)="closeOffcanvas()">{{ 'NAV.REVIEWS' | t }}</a></li>
+    <li><a routerLink="/blogs" (click)="closeOffcanvas()">{{ 'NAV.BLOGS' | t }}</a></li>
+    <li><a routerLink="/reviews" (click)="closeOffcanvas()">{{ 'NAV.REVIEWS' | t }}</a></li>
     <li><a routerLink="/about" (click)="closeOffcanvas()">{{ 'NAV.ABOUT' | t }}</a></li>
   </ul>
 

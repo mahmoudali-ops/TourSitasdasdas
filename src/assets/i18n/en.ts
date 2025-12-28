@@ -97,6 +97,89 @@ export const EN = {
         TRIPS: 'Custom trips for every budget'
       },
       BUTTON: 'Learn More'
+    },
+    Review: 'Read what our travelers say — and share your own experience with us!',
+    
+      BLOGS: {
+    TITLE: "Travel Blog",
+    SUBTITLE: "Inspiring travel stories, tips, and guides by TopPicksTravels",
+    READ_MORE: "Read More →",
+    CATEGORY: {
+      TRAVEL_TIPS: "Travel Tips",
+      HISTORY: "History",
+      ADVENTURE: "Adventure"
+    },
+    HURGHADA: {
+      TITLE: "Top Things To Do in Hurghada",
+      EXCERPT: "Discover the best activities in Hurghada, from snorkeling and diving to desert safaris and island trips."
+    },
+    LUXOR: {
+      TITLE: "Why Luxor Is the World’s Greatest Open-Air Museum",
+      EXCERPT: "Explore the ancient wonders of Luxor, including Karnak Temple, Valley of the Kings, and more."
     }
+
+    
+  }
+
+  ,
+
+  
+  HURGHADA_BLOG: {
+    TITLE: "Hurghada Red Sea Egypt - Top Things to Do",
+    SUBTITLE: "Discover Hurghada’s best beaches, diving spots, resorts, and cultural experiences with TopPicksTravels",
+    INTRO_TITLE: "Hurghada City Overview",
+    INTRO_TEXT: "Hurghada is one of Egypt’s most popular tourist destinations located along the Red Sea coast. Known for its turquoise waters, golden sandy beaches, vibrant nightlife, and luxury resorts, Hurghada attracts travelers from all over the world. Whether you are looking for scuba diving, snorkeling, desert adventures, or relaxing by the Red Sea, Hurghada has everything to make your vacation unforgettable. Explore coral reefs, islands, and marine life for a once-in-a-lifetime experience.",
+    WHERE_TO_STAY_TITLE: "Where to Stay in Hurghada",
+    WHERE_TO_STAY_TEXT: "Hurghada offers a wide range of accommodations including luxury resorts, 5-star hotels, boutique hotels, and budget-friendly options. Many resorts provide all-inclusive packages with private beaches, swimming pools, spa facilities, and restaurants serving Egyptian, Mediterranean, and international cuisines. Popular areas include Sahl Hasheesh, El Gouna, and the main city center. Many hotels can also organize guided tours to Luxor, Cairo, and nearby desert safaris.",
+    WHAT_TO_DO_TITLE: "Things to Do in Hurghada",
+    FOOD_TITLE: "Local and International Cuisine",
+    FOOD_TEXT: "Hurghada has an eclectic food scene with restaurants offering Egyptian specialties, fresh seafood, Asian dishes, and international cuisine. Must-visit places include White Elephant, StarFish, Nubian Café, and local street food markets offering authentic Egyptian flavors. Dining in Hurghada combines delicious meals with beautiful sea views.",
+    SCUBA_TITLE: "Scuba Diving & Snorkeling",
+    SCUBA_TEXT: "Hurghada is one of the top diving destinations in the world. You can join PADI courses, wreck dives, night diving, or just enjoy snorkeling among vibrant coral reefs and exotic marine life. Diving tours are available for beginners and experienced divers alike, offering unforgettable underwater adventures.",
+    QUAD_TITLE: "Quad Bike Desert Safari",
+    QUAD_TEXT: "Experience the Egyptian desert on a thrilling quad bike safari. Visit Bedouin villages, enjoy local Arabian cuisine, ride camels, and even try dune surfing. A professional guide ensures your desert adventure is safe, fun, and full of unforgettable experiences.",
+    OTHER_TITLE: "Other Activities in Hurghada",
+    ACTIVITY_1: "Windsurfing, Kite Surfing and Jet Skis",
+    ACTIVITY_2: "Excursions to Luxor or Cairo",
+    ACTIVITY_3: "Visit the Saint Anthony and Saint Paul Monastery",
+    ACTIVITY_4: "Beach activities and relaxation",
+    ACTIVITY_5: "Red Sea Islands Snorkelling trips",
+    BEACHES_TITLE: "Beautiful Beaches in Hurghada",
+    BEACHES_TEXT: "Hurghada is famous for pristine beaches like Makadi Bay, Sahl Hasheesh, and Giftun Islands. Enjoy sunbathing, swimming, and water sports in crystal-clear waters. The beaches are perfect for families, couples, and solo travelers looking for relaxation and adventure.",
+    DIVING_TOURS_TITLE: "Red Sea Diving Tours",
+    DIVING_TOURS_TEXT: "Explore some of the world’s most beautiful coral reefs, shipwrecks, and marine reserves. Red Sea diving tours in Hurghada offer unique experiences with trained instructors and safety measures, suitable for all levels.",
+    LOCAL_MARKETS_TITLE: "Explore Local Markets",
+    LOCAL_MARKETS_TEXT: "Hurghada’s local markets, such as the Hurghada Marina Market, offer a vibrant mix of souvenirs, handicrafts, spices, and Egyptian delicacies. Visiting local markets is a cultural experience you shouldn’t miss during your trip.",
+    CONCLUSION_TITLE: "Plan Your Hurghada Trip Today",
+    CONCLUSION_TEXT: "Hurghada offers a perfect combination of adventure, relaxation, and cultural experiences. From luxury resorts to desert safaris, diving, and local cuisine, every traveler will find something unforgettable. Book your Hurghada trip with TopPicksTravels and enjoy a dream vacation along Egypt’s Red Sea coast."
+  }
+  ,
+  LUXOR_BLOG: {
+    TITLE: "Luxor Egypt - Explore Ancient Wonders and Tours",
+    SUBTITLE: "Discover the temples, Nile cruises, museums, and cultural experiences in Luxor with TopPicksTravels",
+    INTRO_TITLE: "Overview of Luxor City",
+    INTRO_TEXT: "Luxor, known as the world’s greatest open-air museum, is one of Egypt’s top tourist destinations. Located along the Nile River, Luxor boasts ancient temples, tombs, monuments, and rich history dating back thousands of years. Travelers can enjoy guided tours, explore archaeological sites, or relax by the Nile while immersing themselves in Egyptian culture.",
+    WHERE_TO_STAY_TITLE: "Where to Stay in Luxor",
+    WHERE_TO_STAY_TEXT: "Luxor offers a wide range of hotels and resorts catering to different budgets, from luxury Nile-view hotels to boutique accommodations. Many provide all-inclusive packages, swimming pools, Nile-view terraces, and easy access to the temples and museums. Popular areas include West Bank, East Bank, and city center, ideal for both sightseeing and relaxing.",
+    WHAT_TO_DO_TITLE: "Things to Do in Luxor",
+    TEMPLE_TITLE: "Visit the Temples",
+    TEMPLE_TEXT: "Explore world-famous temples such as Karnak Temple, Luxor Temple, and the Temple of Hatshepsut. These magnificent ancient structures showcase Egyptian architecture, hieroglyphics, and cultural heritage that date back millennia.",
+    NILE_CRUISE_TITLE: "Nile River Cruises",
+    NILE_CRUISE_TEXT: "Experience a scenic Nile River cruise, enjoying stunning views of temples, palm groves, and ancient monuments. Cruises offer options for day trips, sunset tours, and luxurious overnight stays on traditional feluccas or modern boats.",
+    MUSEUM_TITLE: "Luxor Museums",
+    MUSEUM_TEXT: "Visit Luxor Museum and the Mummification Museum to explore artifacts, royal treasures, statues, and insights into ancient Egyptian life. These museums complement the outdoor archaeological experience.",
+    OTHER_TITLE: "Other Activities",
+    ACTIVITY_1: "Hot air balloon rides over the Nile",
+    ACTIVITY_2: "Horse-drawn carriage tours around the city",
+    ACTIVITY_3: "Shopping at Luxor souks and markets",
+    ACTIVITY_4: "Cultural workshops and local performances",
+    ACTIVITY_5: "Day trips to the Valley of the Kings",
+    CONCLUSION_TITLE: "Plan Your Luxor Trip Today",
+    CONCLUSION_TEXT: "Luxor offers a perfect mix of adventure, history, and culture. From exploring temples and tombs to Nile cruises and local markets, every traveler will find an unforgettable experience. Book your Luxor trip with TopPicksTravels and immerse yourself in Egypt’s timeless wonders."
+  }
+  
+  
+  
+ 
      
   };
