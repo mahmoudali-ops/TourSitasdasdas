@@ -9,7 +9,7 @@ import { FormBuilder, FormGroup, Validators,ReactiveFormsModule } from '@angular
 import { NgClass } from "@angular/common";
 import { ToastrService } from 'ngx-toastr';
 import { SafeUrlPipe } from '../../core/pipes/safe-url.pipe';
-import { DomSanitizer } from '@angular/platform-browser';
+import { DomSanitizer, Title } from '@angular/platform-browser';
 import { ReloadableComponent } from '../reloadable/reloadable.component';
 import { TranslatedPipe } from '../../core/pipes/translate.pipe';
 
@@ -30,6 +30,7 @@ export class TOurDetailComponent  extends ReloadableComponent  {
   private readonly TourService = inject(TourService);
   private readonly emailService = inject(EmailService);
   private readonly activeRoute = inject(ActivatedRoute);
+  private readonly titleService = inject(Title);
   private readonly fb = inject(FormBuilder);
   private readonly toasterService = inject(ToastrService);
 
@@ -55,7 +56,9 @@ export class TOurDetailComponent  extends ReloadableComponent  {
     this.activeRoute.paramMap
       .pipe(
         switchMap(params => {
-          const slug =params.get('slug');
+          const slug =params.get('slug')??'Tours Details - TOP PICKS TRAVELS';
+          const formattedTitle = slug.replace(/-/g, ' ').toUpperCase();
+          this.titleService.setTitle(`${formattedTitle} | TOP PICKS TRAVELS`);
           return this.TourService.getDetaildedTOur(slug);
         }),
         takeUntil(this.destroy$)
@@ -68,7 +71,7 @@ export class TOurDetailComponent  extends ReloadableComponent  {
       });
   }
   
-//     ngOnDestroy(): void {
+//      ngOnDestroy(): void {
 //       if(this.TourSubs()){
 //         this.TourSubs()?.unsubscribe();
 //       }

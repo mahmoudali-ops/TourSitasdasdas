@@ -8,6 +8,7 @@ import { HttpErrorResponse } from '@angular/common/http';
 import { isPlatformBrowser } from '@angular/common';
 import { ReloadableComponent } from '../reloadable/reloadable.component';
 import { TranslatedPipe } from '../../core/pipes/translate.pipe';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-category-tour-detail',
@@ -28,6 +29,7 @@ export class CategoryTourDetailComponent  extends ReloadableComponent {
   
     private readonly categoryService=inject(CattourService);
     private readonly activeRouete=inject(ActivatedRoute);
+     private readonly titleService=inject(Title);
   
   
     ngOnInit(): void {
@@ -42,7 +44,9 @@ export class CategoryTourDetailComponent  extends ReloadableComponent {
     this.activeRouete.paramMap
       .pipe(
         switchMap(params => {
-          const slug =params.get('slug');
+          const slug =params.get('slug')??'Category Tours Details - TOP PICKS TRAVELS';
+          const formattedTitle = slug.replace(/-/g, ' ').toUpperCase();
+          this.titleService.setTitle(`${formattedTitle} | TOP PICKS TRAVELS`);
           return this.categoryService.getDetaildedCategorTour(slug);
         }),
         takeUntil(this.destroy$) // <-- هنا بنستخدم takeUntil
