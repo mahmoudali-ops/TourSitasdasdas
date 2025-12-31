@@ -53,7 +53,6 @@ export class CategoryTourDetailComponent  extends ReloadableComponent {
       )
       .subscribe({
         next: (res) => {
-          console.log("Data is is ",res);
           this.DetailedCategoryTour.set(res);
         },
         error: (err: HttpErrorResponse) => {
