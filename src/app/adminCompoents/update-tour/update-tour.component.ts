@@ -150,6 +150,7 @@ export class UpdateTourComponent implements OnInit {
     this.tourService.getAllDetaildedTour(this.tourId).subscribe({
       next: (data) => {
         this.fillForm(data);
+        console.log('Data is is ', data);
       },
       error: (error) => {
         console.error('Error loading tour data:', error);
