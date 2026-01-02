@@ -96,7 +96,7 @@ export class CreateTransferComponent {
       name: ['', Validators.required],
       description: ['', Validators.required],
       metaDescription: [''],
-      metaKeyWords: ['']
+      metaKeywords: ['']
     });
   }
 
@@ -211,7 +211,7 @@ export class CreateTransferComponent {
       if (group.get('name')?.invalid) this.formErrors.push({ label: 'Title', lang });
       if (group.get('description')?.invalid) this.formErrors.push({ label: 'Description', lang });
       if (group.get('metaDescription')?.invalid) this.formErrors.push({ label: 'Meta Description', lang });
-      if (group.get('metaKeyWords')?.invalid) this.formErrors.push({ label: 'Meta Keywords', lang });
+      if (group.get('metaKeywords')?.invalid) this.formErrors.push({ label: 'Meta Keywords', lang });
     });
   }
 
@@ -242,7 +242,7 @@ export class CreateTransferComponent {
       Name: this.getTranslationGroup(lang).value.name,
       Description: this.getTranslationGroup(lang).value.description,
       MetaDescription: this.getTranslationGroup(lang).value.metaDescription,
-      MetaKeyWords: this.getTranslationGroup(lang).value.metaKeyWords
+      MetaKeyWords: this.getTranslationGroup(lang).value.metaKeywords
     }));
     formData.append('TranslationsJson', JSON.stringify(translations));
 

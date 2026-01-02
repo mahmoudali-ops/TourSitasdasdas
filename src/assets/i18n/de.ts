@@ -172,5 +172,31 @@ export const DE = {
       ACTIVITY_5: "Tagesausflüge ins Tal der Könige",
       CONCLUSION_TITLE: "Planen Sie Ihre Luxor-Reise",
       CONCLUSION_TEXT: "Luxor bietet die perfekte Mischung aus Abenteuer, Geschichte und Kultur. Vom Erkunden der Tempel und Gräber bis zu Nilkreuzfahrten und lokalen Märkten – jeder Reisende findet ein unvergessliches Erlebnis. Buchen Sie Ihre Luxor-Reise mit TopPicksTravels."
+    }, 
+    
+
+
+    ABOUT_: {
+      TITLE: "Wer wir sind",
+      DESCRIPTION_1: "Top Picks Travels ist ein professionelles Tourismusunternehmen, das sich der Schaffung unvergesslicher Reiseerlebnisse in ganz Ägypten widmet. Von kulturellen Touren und Wüstensafaris bis hin zu Meeresabenteuern und Stadtausflügen helfen wir Reisenden, Ägypten komfortabel, sicher und authentisch zu entdecken.",
+      DESCRIPTION_2: "Unsere Mission ist es, hochwertige Dienstleistungen, wettbewerbsfähige Preise und maßgeschneiderte Reiselösungen anzubieten, die den Bedürfnissen jedes Reisenden entsprechen. Ob allein, mit der Familie oder in der Gruppe – wir sorgen für eine reibungslose und unvergessliche Reise.",
+    
+      FEATURES: {
+        QUALITY: {
+          TITLE: "Premium-Qualität",
+          TEXT: "Wir bieten sorgfältig ausgewählte Touren und Services, um höchste Qualitäts- und Komfortstandards zu gewährleisten."
+        },
+        TEAM: {
+          TITLE: "Erfahrenes Team",
+          TEXT: "Unser Team besteht aus Tourismusexperten und lokalen Guides mit umfassendem Wissen und Leidenschaft fürs Reisen."
+        },
+        TRUST: {
+          TITLE: "Vertrauenswürdig & Zuverlässig",
+          TEXT: "Wir setzen auf Transparenz, Zuverlässigkeit und langfristige Beziehungen zu unseren Kunden."
+        }
+      }
     }
+    
+    
+    
   };

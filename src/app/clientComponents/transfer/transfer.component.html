@@ -5,7 +5,7 @@
     <img
       src="assets/images/chuttersnap-xDjcU1Pglro-unsplash (1).jpg" 
       alt="Hotel Image"
-      class="hero-img-new"
+      class="hero-img-new" loading="lazy"
     />
   </div>
 
@@ -65,7 +65,7 @@
                 <div class="card-img-box pointer" [routerLink]="['/transferDetail', transfer.slug]">
                   <img [src]="transfer.imageCover"
                        [alt]="transfer.names"
-                       class="card-img" />
+                       class="card-img"loading="lazy" />
                   <div class="img-overlay"></div>
     
                   <!-- Destination Badge -->

@@ -344,8 +344,8 @@ export class CreateTourComponent {
       Language: lang,
       Title: this.getTranslationGroup(lang).value.title,
       Description: this.getTranslationGroup(lang).value.description,
-      metaDescription: this.getTranslationGroup(lang).value.metaDescription,
-      metaKeywords: this.getTranslationGroup(lang).value.metaKeywords
+      MetaDescription: this.getTranslationGroup(lang).value.metaDescription,
+      MetaKeyWords: this.getTranslationGroup(lang).value.metaKeywords
     }));
     formData.append('TranslationsJson', JSON.stringify(translations));
 

@@ -5,6 +5,7 @@
       <img
         [src]="DetailedTour()?.imageCover"
         [alt]="DetailedTour()?.titles"
+        loading="lazy"
         class="hero-img-new"
       />
     </div>
@@ -76,6 +77,7 @@
               <img 
                 [src]="DetailedTour()!.tourImgs[currentCarouselIndex()].imageCarouselUrl" 
                 [alt]="DetailedTour()!.tourImgs[currentCarouselIndex()].titles" 
+                loading="lazy"
                 class="carousel-image"
               />
               <button class="carousel-btn prev-btn" (click)="prevCarouselImage()">

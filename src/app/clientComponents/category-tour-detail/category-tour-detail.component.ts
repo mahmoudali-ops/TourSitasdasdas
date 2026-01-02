@@ -8,7 +8,7 @@ import { HttpErrorResponse } from '@angular/common/http';
 import { isPlatformBrowser } from '@angular/common';
 import { ReloadableComponent } from '../reloadable/reloadable.component';
 import { TranslatedPipe } from '../../core/pipes/translate.pipe';
-import { Title } from '@angular/platform-browser';
+import { Meta, Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-category-tour-detail',
@@ -30,6 +30,8 @@ export class CategoryTourDetailComponent  extends ReloadableComponent {
     private readonly categoryService=inject(CattourService);
     private readonly activeRouete=inject(ActivatedRoute);
      private readonly titleService=inject(Title);
+     private readonly metaService = inject(Meta);
+
   
   
     ngOnInit(): void {
@@ -37,30 +39,95 @@ export class CategoryTourDetailComponent  extends ReloadableComponent {
       this.onReload(() => this.LoadData());
     }
   
-    LoadData(){if (isPlatformBrowser(this.platformId)) {
-      document.body.classList.add('category-open');
-    }
-  
-    this.activeRouete.paramMap
-      .pipe(
-        switchMap(params => {
-          const slug =params.get('slug')??'Category Tours Details - TOP PICKS TRAVELS';
-          const formattedTitle = slug.replace(/-/g, ' ').toUpperCase();
-          this.titleService.setTitle(`${formattedTitle} | TOP PICKS TRAVELS`);
-          return this.categoryService.getDetaildedCategorTour(slug);
-        }),
-        takeUntil(this.destroy$) // <-- هنا بنستخدم takeUntil
-      )
-      .subscribe({
-        next: (res) => {
-          this.DetailedCategoryTour.set(res);
-        },
-        error: (err: HttpErrorResponse) => {
-          console.log(err.message);
-        }
-      });
+    LoadData() {
+
+      if (isPlatformBrowser(this.platformId)) {
+        document.body.classList.add('category-open');
+      }
     
+      this.activeRouete.paramMap
+        .pipe(
+          switchMap(params => {
+            const slug = params.get('slug') ?? '';
+    
+            // Fallback title (قبل ما الداتا ترجع)
+            const formattedTitle = slug.replace(/-/g, ' ');
+            this.titleService.setTitle(`${formattedTitle} | Top Picks Travels`);
+    
+            return this.categoryService.getDetaildedCategorTour(slug);
+          }),
+          takeUntil(this.destroy$)
+        )
+        .subscribe({
+          next: (res: IdetailedCattour) => {
+    
+            this.DetailedCategoryTour.set(res);
+    
+            /* ===============================
+               🔥 Dynamic SEO Starts Here
+            =============================== */
+    
+            // 🔹 Title
+            this.titleService.setTitle(
+              `${res.titles} | Hurghada Tours | Top Picks Travels`
+            );
+    
+            // 🔹 Remove old meta (important in SPA)
+            this.metaService.removeTag("name='description'");
+            this.metaService.removeTag("name='keywords'");
+    
+            // 🔹 Meta Description
+            this.metaService.updateTag({
+              name: 'description',
+              content:
+                res.metaDescription ||
+                `Explore ${res.titles} with Top Picks Travels. Discover the best tours and excursions in Hurghada and across Egypt.`
+            });
+    
+            // 🔹 Meta Keywords
+            this.metaService.updateTag({
+              name: 'keywords',
+              content:
+                res.metaKeyWords ||
+                `${res.titles}, Hurghada tours, Egypt excursions, Top Picks Travels`
+            });
+    
+            // 🔹 Open Graph (Social + SEO)
+            this.metaService.updateTag({
+              property: 'og:title',
+              content: `${res.titles} | Top Picks Travels`
+            });
+    
+            this.metaService.updateTag({
+              property: 'og:description',
+              content: res.metaDescription
+            });
+    
+            this.metaService.updateTag({
+              property: 'og:image',
+              content: res.imageCover
+            });
+    
+            this.metaService.updateTag({
+              property: 'og:type',
+              content: 'website'
+            });
+    
+            this.metaService.updateTag({
+              property: 'og:url',
+              content: `https://toppickstravels.com/categories/${res.slug}`
+            });
+    
+            /* ===============================
+               🔥 End Dynamic SEO
+            =============================== */
+          },
+          error: (err: HttpErrorResponse) => {
+            console.log(err.message);
+          }
+        });
     };
+    
     // ngOnDestroy(): void {
     //   if (isPlatformBrowser(this.platformId)) {
     //     document.body.classList.remove('category-open');

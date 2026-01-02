@@ -172,5 +172,27 @@ export const NL = {
       ACTIVITY_5: "Wycieczki jednodniowe do Doliny Królów",
       CONCLUSION_TITLE: "Zaplanuj swoją podróż do Luxoru",
       CONCLUSION_TEXT: "Luxor oferuje idealne połączenie przygody, historii i kultury. Od zwiedzania świątyń i grobowców po rejsy po Nilu i lokalne targi – każdy podróżnik znajdzie tu niezapomniane doświadczenia. Zarezerwuj swoją podróż z TopPicksTravels i zanurz się w ponadczasowych cudach Egiptu."
+    },
+
+    ABOUT_: {
+      TITLE: "Kim jesteśmy",
+      DESCRIPTION_1: "Top Picks Travels to profesjonalna firma turystyczna, której celem jest tworzenie niezapomnianych doświadczeń podróżniczych w całym Egipcie. Od wycieczek kulturowych i safari na pustyni po morskie przygody i zwiedzanie miast – pomagamy odkrywać Egipt w komfortowy, bezpieczny i autentyczny sposób.",
+      DESCRIPTION_2: "Naszą misją jest oferowanie usług najwyższej jakości, konkurencyjnych cen oraz spersonalizowanych rozwiązań podróżniczych dopasowanych do potrzeb każdego turysty. Niezależnie od tego, czy podróżujesz sam, z rodziną czy w grupie – dbamy o płynną i niezapomnianą podróż.",
+    
+      FEATURES: {
+        QUALITY: {
+          TITLE: "Najwyższa jakość",
+          TEXT: "Oferujemy starannie wyselekcjonowane wycieczki i usługi, aby zapewnić najwyższe standardy jakości i komfortu."
+        },
+        TEAM: {
+          TITLE: "Doświadczony zespół",
+          TEXT: "Nasz zespół składa się z ekspertów turystyki i lokalnych przewodników z dużą wiedzą i pasją do podróży."
+        },
+        TRUST: {
+          TITLE: "Zaufanie i niezawodność",
+          TEXT: "Stawiamy na przejrzystość, rzetelność oraz długoterminowe relacje z naszymi klientami."
+        }
+      }
     }
+    
   };

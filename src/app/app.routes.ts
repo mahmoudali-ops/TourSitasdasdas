@@ -3,7 +3,6 @@ import { ClientLayoutComponent } from './layouts/client-layout/client-layout.com
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 import { NotfoundComponent } from './clientComponents/notfound/notfound.component';
 import { HomeComponent } from './clientComponents/home/home.component';
-import { ToursComponent } from './clientComponents/tours/tours.component';
 import { TransferComponent } from './clientComponents/transfer/transfer.component';
 import { DestnationsComponent } from './clientComponents/destnations/destnations.component';
 import { FaqComponent } from './clientComponents/faq/faq.component';
@@ -35,66 +34,55 @@ import { BlogsComponent } from './clientComponents/blogs/blogs.component';
 import { HurghadablogsComponent } from './clientComponents/hurghadablogs/hurghadablogs.component';
 import { LuxorblogComponent } from './clientComponents/luxorblog/luxorblog.component';
 import { logedGuard } from './core/guards/loged.guard';
-
 export const routes: Routes = [
     {
-        path: '',component:ClientLayoutComponent,
-        children:[
-            {path: '',redirectTo: 'home',pathMatch: 'full' },
-            {path: 'home',component:HomeComponent,title: 'Home' },  
-            {path: 'transfer',component:TransferComponent,title: 'Transfers' },
-            {path: 'tourDetail/:slug',component:TOurDetailComponent },
-            {path: 'transferDetail/:slug',component:TransfersDetailComponent },
-            {path: 'categrytourDetail/:slug',component:CategoryTourDetailComponent },
-            {path: 'reviews',component:ReviewsComponent,title: 'Reviews' },
-            {path: 'hurghadaBlog',component:HurghadablogsComponent,title: 'Hurghada Blogs' },
-            {path: 'luxorBlog',component:LuxorblogComponent,title: 'Luxor Blogs' },
-            {path: 'blogs',component:BlogsComponent,title: 'Our Blogs' },
-            {path: 'about',component:AboutComponent,title: 'About' },
-        ] 
+      path: '',
+      loadComponent: () => import('./layouts/client-layout/client-layout.component').then(m => m.ClientLayoutComponent),
+      children: [
+        { path: '', redirectTo: 'home', pathMatch: 'full' },
+        { path: 'home', loadComponent: () => import('./clientComponents/home/home.component').then(m => m.HomeComponent) },
+        { path: 'transfer', loadComponent: () => import('./clientComponents/transfer/transfer.component').then(m => m.TransferComponent) },
+        { path: 'tourDetail/:slug', loadComponent: () => import('./clientComponents/tour-detail/tour-detail.component').then(m => m.TOurDetailComponent) },
+        { path: 'transferDetail/:slug', loadComponent: () => import('./clientComponents/transfers-detail/transfers-detail.component').then(m => m.TransfersDetailComponent) },
+        { path: 'categrytourDetail/:slug', loadComponent: () => import('./clientComponents/category-tour-detail/category-tour-detail.component').then(m => m.CategoryTourDetailComponent) },
+        { path: 'reviews', loadComponent: () => import('./clientComponents/reviews/reviews.component').then(m => m.ReviewsComponent) },
+        { path: 'hurghadaBlog', loadComponent: () => import('./clientComponents/hurghadablogs/hurghadablogs.component').then(m => m.HurghadablogsComponent) },
+        { path: 'luxorBlog', loadComponent: () => import('./clientComponents/luxorblog/luxorblog.component').then(m => m.LuxorblogComponent) },
+        { path: 'blogs', loadComponent: () => import('./clientComponents/blogs/blogs.component').then(m => m.BlogsComponent) },
+        { path: 'about', loadComponent: () => import('./clientComponents/about/about.component').then(m => m.AboutComponent) },
+      ]
     },
     {
-        path: 'admin',
-        component: AdminLayoutComponent,
-        children: [
-          // صفحات غير محمية (Login / Register)
-          { path: 'login', component: LoginComponent, title: 'Login',canActivate: [logedGuard] },
-          { path: 'register', component: RegisterComponent, title: 'Register' },
-      
-          // صفحات Dashboard محمية بالـ guard
-          { path: 'tours', component: ToursAdComponent, title: 'Tours Dashboard', canActivate: [authGuardGuard] },// authGuardGuard
-          { path: 'categorytour', component: CategorytourAdComponent, title: 'Category Tour Dashboard', canActivate: [authGuardGuard] },
-          { path: 'destnaions', component: DestnationAdComponent, title: 'Destnaions Dashboard', canActivate: [authGuardGuard] },
-          { path: 'transfers', component: TrasnfersAdComponent, title: 'Transfers Dashboard', canActivate: [authGuardGuard] },
-      
-          { path: 'emails', component: EmailAdComponent, title: 'Emails', canActivate: [authGuardGuard] },
-          { path: 'users', component: UsersComponent, title: 'Users', canActivate: [authGuardGuard] },
-      
-          // CRUD Tours محمية بالـ guard
-          { path: 'tourCreate', component: CreateTourComponent, title: 'Admin Create a Tour', canActivate: [authGuardGuard] },
-          { path: 'tourUpdate/:id', component: UpdateTourComponent, title: 'Admin Update a Tour', canActivate: [authGuardGuard] },
-      
-          // CRUD Destinations محمية بالـ guard
-          { path: 'destnationCreate', component: CreateDestnaionsComponent, title: 'Admin Create a Destnation', canActivate: [authGuardGuard] },
-          { path: 'destnationUpdate/:id', component: UpdateDestnaionsComponent, title: 'Admin Update a Destnation', canActivate: [authGuardGuard] },
-      
-          // CRUD Category Tours محمية بالـ guard
-          { path: 'catTourCreate', component: CreateCatTourComponent, title: 'Admin Create a Category Tour', canActivate: [authGuardGuard] },
-          { path: 'catTourUpdate/:id', component: UpdateCatTourComponent, title: 'Admin Update a Category Tour', canActivate: [authGuardGuard] },
-      
-          // CRUD Transfers محمية بالـ guard
-          { path: 'transferCreate', component: CreateTransferComponent, title: 'Admin Create a Transfer', canActivate: [authGuardGuard] },
-          { path: 'transferUpdate/:id', component: UpdateTransferComponent, title: 'Admin Update a Transfer', canActivate: [authGuardGuard] },
-      
-          // redirect افتراضي لأي /admin يذهب للـ dashboard
-          { path: '', redirectTo: 'tours', pathMatch: 'full' },
-      
-          // صفحة not found داخل الـ admin
-          { path: '**', redirectTo: 'tours' },
-        ]
-      }
-      ,
-    {
-        path: '**',component:NotfoundComponent ,title: 'Not Found Page'
-    }
-];
+      path: 'admin',
+      loadComponent: () => import('./layouts/admin-layout/admin-layout.component').then(m => m.AdminLayoutComponent),
+      children: [
+        { path: 'login', loadComponent: () => import('./adminCompoents/login/login.component').then(m => m.LoginComponent), canActivate: [logedGuard], title: 'Login' },
+        { path: 'register', loadComponent: () => import('./adminCompoents/register/register.component').then(m => m.RegisterComponent), title: 'Register' },
+  
+        { path: 'tours', loadComponent: () => import('./adminCompoents/tours-ad/tours-ad.component').then(m => m.ToursAdComponent), canActivate: [authGuardGuard], title: 'Tours Dashboard' },
+        { path: 'categorytour', loadComponent: () => import('./adminCompoents/categorytour-ad/categorytour-ad.component').then(m => m.CategorytourAdComponent), canActivate: [authGuardGuard], title: 'Category Tour Dashboard' },
+        { path: 'destnaions', loadComponent: () => import('./adminCompoents/destnation-ad/destnation-ad.component').then(m => m.DestnationAdComponent), canActivate: [authGuardGuard], title: 'Destnaions Dashboard' },
+        { path: 'transfers', loadComponent: () => import('./adminCompoents/trasnfers-ad/trasnfers-ad.component').then(m => m.TrasnfersAdComponent), canActivate: [authGuardGuard], title: 'Transfers Dashboard' },
+  
+        { path: 'emails', loadComponent: () => import('./adminCompoents/email-ad/email-ad.component').then(m => m.EmailAdComponent), canActivate: [authGuardGuard], title: 'Emails' },
+        { path: 'users', loadComponent: () => import('./adminCompoents/users/users.component').then(m => m.UsersComponent), canActivate: [authGuardGuard], title: 'Users' },
+  
+        { path: 'tourCreate', loadComponent: () => import('./adminCompoents/create-tour/create-tour.component').then(m => m.CreateTourComponent), canActivate: [authGuardGuard], title: 'Admin Create a Tour' },
+        { path: 'tourUpdate/:id', loadComponent: () => import('./adminCompoents/update-tour/update-tour.component').then(m => m.UpdateTourComponent), canActivate: [authGuardGuard], title: 'Admin Update a Tour' },
+  
+        { path: 'destnationCreate', loadComponent: () => import('./adminCompoents/create-destnaions/create-destnaions.component').then(m => m.CreateDestnaionsComponent), canActivate: [authGuardGuard], title: 'Admin Create a Destnation' },
+        { path: 'destnationUpdate/:id', loadComponent: () => import('./adminCompoents/update-destnaions/update-destnaions.component').then(m => m.UpdateDestnaionsComponent), canActivate: [authGuardGuard], title: 'Admin Update a Destnation' },
+  
+        { path: 'catTourCreate', loadComponent: () => import('./adminCompoents/create-cat-tour/create-cat-tour.component').then(m => m.CreateCatTourComponent), canActivate: [authGuardGuard], title: 'Admin Create a Category Tour' },
+        { path: 'catTourUpdate/:id', loadComponent: () => import('./adminCompoents/update-cat-tour/update-cat-tour.component').then(m => m.UpdateCatTourComponent), canActivate: [authGuardGuard], title: 'Admin Update a Category Tour' },
+  
+        { path: 'transferCreate', loadComponent: () => import('./adminCompoents/create-transfer/create-transfer.component').then(m => m.CreateTransferComponent), canActivate: [authGuardGuard], title: 'Admin Create a Transfer' },
+        { path: 'transferUpdate/:id', loadComponent: () => import('./adminCompoents/update-transfer/update-transfer.component').then(m => m.UpdateTransferComponent), canActivate: [authGuardGuard], title: 'Admin Update a Transfer' },
+  
+        { path: '', redirectTo: 'tours', pathMatch: 'full' },
+        { path: '**', redirectTo: 'tours' },
+      ]
+    },
+    { path: '**', loadComponent: () => import('./clientComponents/notfound/notfound.component').then(m => m.NotfoundComponent), title: 'Not Found Page' }
+  ];
+  

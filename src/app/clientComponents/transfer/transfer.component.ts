@@ -8,6 +8,7 @@ import { RouterLink } from "@angular/router";
 import { TermtextPipe } from '../../core/pipes/termtext.pipe';
 import { CommonModule } from '@angular/common';
 import { ReloadableComponent } from '../reloadable/reloadable.component';
+import { Meta, Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-transfer',
@@ -19,7 +20,9 @@ import { ReloadableComponent } from '../reloadable/reloadable.component';
 export class TransferComponent extends ReloadableComponent  {
 
    private readonly TransferService=inject(TransferService);
-  
+   private readonly meta=inject(Meta);
+   private readonly title=inject(Title);
+
     // AllTrasnferList:Itransfer[]=[];
     AllTrasnferList:WritableSignal<Itransfer[]>=signal([]);
     TrasnferSUbs:WritableSignal<Subscription|null>=signal(null);
@@ -27,8 +30,28 @@ export class TransferComponent extends ReloadableComponent  {
     ngOnInit(): void {
     this.LoadData();
     this.onReload(() => this.LoadData());
+    this.LoadDataSeo();
+
         
       }
+
+      LoadDataSeo(){
+        this.title.setTitle(
+          'Hurghada Airport & Private Transfer | Top Picks Travels'
+        );
+      
+        this.meta.updateTag({
+          name: 'description',
+          content:
+            'Book reliable airport and private transfer services in Hurghada with Top Picks Travels. Safe, comfortable transfers from Hurghada Airport to hotels, resorts, and destinations across Egypt.'
+        });
+      
+        this.meta.updateTag({
+          name: 'keywords',
+          content:
+            'Hurghada airport transfer, Hurghada private transfer, Egypt transfer service, hotel transfer Hurghada, Red Sea airport pickup, Top Picks Travels transfer'
+        });
+      };
     LoadData(){
       this.TransferService.getAllTransfers()
       .pipe(takeUntil(this.destroy$))

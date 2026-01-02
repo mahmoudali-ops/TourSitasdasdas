@@ -89,8 +89,8 @@ export const EN = {
     },
     ABOUT: {
       TITLE: 'About Us',
-      INTRO: 'TopPicks Travels is a leading travel company offering unforgettable travel experiences in Egypt and around the world.',
-      DESCRIPTION: 'Since 2010, we believe every journey tells a story and every adventure creates lasting memories. We combine top-notch service with modern travel experiences.',
+      INTRO: 'Top Picks Travels is a professional travel agency based in Hurghada, Egypt,specializing in tours, excursions, snorkeling trips, desert safaris, and private transfers. We help travelers explore the beauty of the Red Sea and the wonders ofEgypt with trusted local guides and exceptional service.',
+      DESCRIPTION: 'ince 2010, we believe every journey tells a story and every adventure creates lasting memories. We combine top-notch service with modern travel experiences.',
       FEATURES: {
         CUSTOMERS: 'Over 50,000 satisfied customers',
         GUIDES: 'Professional and experienced tour guides',
@@ -176,7 +176,28 @@ export const EN = {
     ACTIVITY_5: "Day trips to the Valley of the Kings",
     CONCLUSION_TITLE: "Plan Your Luxor Trip Today",
     CONCLUSION_TEXT: "Luxor offers a perfect mix of adventure, history, and culture. From exploring temples and tombs to Nile cruises and local markets, every traveler will find an unforgettable experience. Book your Luxor trip with TopPicksTravels and immerse yourself in Egypt’s timeless wonders."
+  },
+  ABOUT_: {
+    TITLE: "Who We Are",
+    DESCRIPTION_1: "Top Picks Travels is a professional tourism company dedicated to creating unforgettable travel experiences across Egypt. From cultural tours and desert safaris to sea adventures and city excursions, we help travelers explore Egypt with comfort, safety, and authenticity.",
+    DESCRIPTION_2: "Our mission is to provide high-quality services, competitive prices, and personalized travel solutions that meet the needs of every traveler. Whether you are traveling solo, with family, or in a group, we ensure your journey is smooth and memorable.",
+  
+    FEATURES: {
+      QUALITY: {
+        TITLE: "Premium Quality",
+        TEXT: "We deliver carefully selected tours and services to ensure the highest standards of quality and comfort."
+      },
+      TEAM: {
+        TITLE: "Experienced Team",
+        TEXT: "Our team consists of tourism experts and local guides with deep knowledge and passion for travel."
+      },
+      TRUST: {
+        TITLE: "Trusted & Reliable",
+        TEXT: "We believe in transparency, reliability, and building long-term relationships with our clients."
+      }
+    }
   }
+  
   
   
   

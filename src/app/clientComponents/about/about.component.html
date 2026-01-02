@@ -2,61 +2,48 @@
 
     <!-- Hero Image -->
     <div class="about-hero">
-      <img src="../../../assets/images/about.jpg" alt="About Us Image" />
+      <img src="assets/images/about.jpg" loading="lazy" alt="About Us Image" />
       <div class="hero-overlay">
         <h1>About Us</h1>
       </div>
     </div>
   
     <!-- About Content -->
-    <div class="about-content">
-      <h2 class="section-title">Who We Are</h2>
-      <p class="about-text">
-        Top Picks Travels is a professional tourism company dedicated to creating
-        unforgettable travel experiences across Egypt. From cultural tours and
-        desert safaris to sea adventures and city excursions, we help travelers
-        explore Egypt with comfort, safety, and authenticity.
-      </p>
-  
-      <p class="about-text">
-        Our mission is to provide high-quality services, competitive prices, and
-        personalized travel solutions that meet the needs of every traveler.
-        Whether you are traveling solo, with family, or in a group, we make sure
-        your journey is smooth and memorable.
-      </p>
-    </div>
-  
-    <!-- Icons Section -->
-    <div class="about-icons">
-  
-      <div class="icon-box">
-        <i class="fas fa-medal"></i>
-        <h3>Premium Quality</h3>
-        <p>
-          We deliver carefully selected tours and services to ensure the highest
-          standards of quality and comfort.
-        </p>
-      </div>
-  
-      <div class="icon-box">
-        <i class="fas fa-users"></i>
-        <h3>Experienced Team</h3>
-        <p>
-          Our team consists of tourism experts and local guides with deep
-          knowledge and passion for travel.
-        </p>
-      </div>
-  
-      <div class="icon-box">
-        <i class="fas fa-handshake"></i>
-        <h3>Trusted & Reliable</h3>
-        <p>
-          We believe in transparency, reliability, and long-term relationships
-          with our clients.
-        </p>
-      </div>
-  
-    </div>
-  
+<!-- About Content -->
+<div class="about-content">
+  <h2 class="section-title">{{ 'ABOUT_.TITLE' | t }}</h2>
+
+  <p class="about-text">
+    {{ 'ABOUT_.DESCRIPTION_1' | t }}
+  </p>
+
+  <p class="about-text">
+    {{ 'ABOUT_.DESCRIPTION_2' | t }}
+  </p>
+</div>
+
+<!-- Icons Section -->
+<div class="about-icons">
+
+  <div class="icon-box">
+    <i class="fas fa-medal"></i>
+    <h3>{{ 'ABOUT_.FEATURES.QUALITY.TITLE' | t }}</h3>
+    <p>{{ 'ABOUT_.FEATURES.QUALITY.TEXT' | t }}</p>
   </div>
+
+  <div class="icon-box">
+    <i class="fas fa-users"></i>
+    <h3>{{ 'ABOUT_.FEATURES.TEAM.TITLE' | t }}</h3>
+    <p>{{ 'ABOUT_.FEATURES.TEAM.TEXT' | t }}</p>
+  </div>
+
+  <div class="icon-box">
+    <i class="fas fa-handshake"></i>
+    <h3>{{ 'ABOUT_.FEATURES.TRUST.TITLE' | t }}</h3>
+    <p>{{ 'ABOUT_.FEATURES.TRUST.TEXT' | t }}</p>
+  </div>
+
+</div>
+
   
+    </div>

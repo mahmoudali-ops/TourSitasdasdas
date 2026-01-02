@@ -50,7 +50,7 @@
 
             <!-- Image  -->
             <div class="tour-image-wrapper">
-              <img [src]="tour.imageCover" class="tour-img pointer" alt="Tour" [routerLink]="['/tourDetail', tour.slug]" />
+              <img [src]="tour.imageCover" loading="lazy" class="tour-img pointer" alt="Tour" [routerLink]="['/tourDetail', tour.slug]" />
 
               <div class="floating-labels">
                 <span class="f-label duration"><i class="fas fa-clock"></i> {{ tour.duration }} h</span>

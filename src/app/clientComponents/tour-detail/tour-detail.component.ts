@@ -9,7 +9,7 @@ import { FormBuilder, FormGroup, Validators,ReactiveFormsModule } from '@angular
 import { NgClass } from "@angular/common";
 import { ToastrService } from 'ngx-toastr';
 import { SafeUrlPipe } from '../../core/pipes/safe-url.pipe';
-import { DomSanitizer, Title } from '@angular/platform-browser';
+import { DomSanitizer, Meta, Title } from '@angular/platform-browser';
 import { ReloadableComponent } from '../reloadable/reloadable.component';
 import { TranslatedPipe } from '../../core/pipes/translate.pipe';
 
@@ -33,6 +33,8 @@ export class TOurDetailComponent  extends ReloadableComponent  {
   private readonly titleService = inject(Title);
   private readonly fb = inject(FormBuilder);
   private readonly toasterService = inject(ToastrService);
+  private readonly metaService = inject(Meta);
+
 
   BookingForm: FormGroup = this.fb.group({
     FullName: ['', [Validators.required, Validators.minLength(3)]],
@@ -56,9 +58,12 @@ export class TOurDetailComponent  extends ReloadableComponent  {
     this.activeRoute.paramMap
       .pipe(
         switchMap(params => {
-          const slug =params.get('slug')??'Tours Details - TOP PICKS TRAVELS';
-          const formattedTitle = slug.replace(/-/g, ' ').toUpperCase();
-          this.titleService.setTitle(`${formattedTitle} | TOP PICKS TRAVELS`);
+          const slug = params.get('slug') ?? '';
+  
+          // Fallback title (لو لسه الداتا مجتش)
+          const formattedTitle = slug.replace(/-/g, ' ');
+          this.titleService.setTitle(`${formattedTitle} | Top Picks Travels`);
+  
           return this.TourService.getDetaildedTOur(slug);
         }),
         takeUntil(this.destroy$)
@@ -66,6 +71,65 @@ export class TOurDetailComponent  extends ReloadableComponent  {
       .subscribe({
         next: (res: IDetailedTour) => {
           this.DetailedTour.set(res);
+  
+          /* ===============================
+             🔥 Dynamic SEO Starts Here
+          =============================== */
+  
+          // 🔹 Title
+          this.titleService.setTitle(
+            `${res.titles} | ${res.destinationName} Tours | Top Picks Travels`
+          );
+  
+          // 🔹 Clear old meta (important for SPA)
+          this.metaService.removeTag("name='description'");
+          this.metaService.removeTag("name='keywords'");
+  
+          // 🔹 Meta Description
+          this.metaService.updateTag({
+            name: 'description',
+            content:
+              res.metaDescription ||
+              `Book ${res.titles} with Top Picks Travels. Enjoy unforgettable tours and excursions in ${res.destinationName}, Egypt.`
+          });
+  
+          // 🔹 Meta Keywords
+          this.metaService.updateTag({
+            name: 'keywords',
+            content:
+              res.metaKeyWords ||
+              `${res.titles}, ${res.destinationName} tours, Egypt excursions, Top Picks Travels`
+          });
+  
+          // 🔹 Open Graph (SEO + Social)
+          this.metaService.updateTag({
+            property: 'og:title',
+            content: `${res.titles} | Top Picks Travels`
+          });
+  
+          this.metaService.updateTag({
+            property: 'og:description',
+            content: res.metaDescription
+          });
+  
+          this.metaService.updateTag({
+            property: 'og:image',
+            content: res.imageCover
+          });
+  
+          this.metaService.updateTag({
+            property: 'og:type',
+            content: 'article'
+          });
+  
+          this.metaService.updateTag({
+            property: 'og:url',
+            content: `https://toppickstravels.com/tours/${res.slug}`
+          });
+  
+          /* ===============================
+             🔥 End Dynamic SEO
+          =============================== */
         },
         error: (err: any) => console.error(err)
       });

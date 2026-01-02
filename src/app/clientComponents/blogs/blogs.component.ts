@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { TranslatedPipe } from '../../core/pipes/translate.pipe';
 import { RouterLink } from "@angular/router";
+import { Meta, Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-blogs',
@@ -31,6 +32,24 @@ export class BlogsComponent {
 
     }
   ];
+    constructor(private meta: Meta, private title: Title) {}
   
-  
+    ngOnInit() {
+      this.title.setTitle(
+        'Travel Blog | Egypt & Hurghada Travel Tips – Top Picks Travels'
+      );
+    
+      this.meta.updateTag({
+        name: 'description',
+        content:
+          'Explore Top Picks Travels blog for the best travel tips, destination guides, and things to do in Hurghada and across Egypt.'
+      });
+    
+      this.meta.updateTag({
+        name: 'keywords',
+        content:
+          'Egypt travel blog, Hurghada travel tips, things to do in Egypt, Red Sea travel guide'
+      });
+    }
+    
 }
