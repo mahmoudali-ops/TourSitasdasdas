@@ -197,7 +197,22 @@ export const EN = {
       }
     }
   }
-  ,HeroDiscription: "Discover Your Next Adventure"
+  ,HeroDiscription: "Discover Your Next Adventure",
+
+  WhyChooseUsTitle: "Why Choose Us",
+  WhyChooseUsSubtitle: "Brilliant Reasons",
+  
+  Service1Title: "Expert Guided Tours",
+  Service1Description: "Discover ancient wonders and historical treasures with our certified professional guides.",
+  Service1Link: "Explore Tours",
+  
+  Service2Title: "Beautiful Beach Trips",
+  Service2Description: "Enjoy the most stunning beaches of the Red Sea and Mediterranean with perfectly arranged trips.",
+  Service2Link: "Explore Trips",
+  
+  Service3Title: "Desert Adventures",
+  Service3Description: "Experience the beauty of the Egyptian desert with unforgettable safari and camping adventures.",
+  Service3Link: "Discover More"
   
   
   

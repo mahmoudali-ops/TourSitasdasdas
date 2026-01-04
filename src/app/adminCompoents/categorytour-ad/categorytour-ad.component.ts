@@ -29,7 +29,6 @@ export class CategorytourAdComponent implements OnInit,OnDestroy {
         next:(res)=>{
           this.AllCAtegortTourList.set(res.data);
 
-          console.log(this.AllCAtegortTourList());
         },
         error:(err)=>{
           console.log(err);

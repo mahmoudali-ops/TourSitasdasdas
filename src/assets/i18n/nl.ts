@@ -194,6 +194,22 @@ export const NL = {
         }
       }
     }
-    ,HeroDiscription: "Odkryj swoją następną przygodę"
+    ,HeroDiscription: "Odkryj swoją następną przygodę",
+
+
+    WhyChooseUsTitle: "Dlaczego Warto Nas Wybrać",
+    WhyChooseUsSubtitle: "Genialne Powody",
+    
+    Service1Title: "Wycieczki z Przewodnikiem",
+    Service1Description: "Odkrywaj starożytne cuda i historyczne skarby z naszymi certyfikowanymi profesjonalnymi przewodnikami.",
+    Service1Link: "Odkryj Wycieczki",
+    
+    Service2Title: "Piękne Wyjazdy na Plażę",
+    Service2Description: "Ciesz się najpiękniejszymi plażami Morza Czerwonego i Morza Śródziemnego dzięki idealnie zorganizowanym wyjazdom.",
+    Service2Link: "Odkryj Wyjazdy",
+    
+    Service3Title: "Przygody na Pustyni",
+    Service3Description: "Doświadcz piękna egipskiej pustyni dzięki niezapomnianym safari i kempingowym przygodom.",
+    Service3Link: "Odkryj Więcej"
 
   };

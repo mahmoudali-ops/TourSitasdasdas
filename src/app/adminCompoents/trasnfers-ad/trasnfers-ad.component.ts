@@ -25,7 +25,6 @@ private readonly TransferService=inject(TransferService);
       this.TrasnferSUbs.set( this.TransferService.getAllAdminTransfers().subscribe({
           next:(res)=>{
             this.AllTrasnferList.set(res.data);
-            console.log(this.AllTrasnferList());
           },
           error:(err:HttpErrorResponse)=>{
             console.log(err.message);

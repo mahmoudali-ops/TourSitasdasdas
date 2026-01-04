@@ -9,7 +9,7 @@ import Swal from 'sweetalert2';
 @Component({
   selector: 'app-destnation-ad',
   standalone: true,
-  imports: [RouterLink],
+  imports: [],
   templateUrl: './destnation-ad.component.html',
   styleUrl: './destnation-ad.component.css'
 })
@@ -24,7 +24,6 @@ export class DestnationAdComponent {
     this.destnationSUbs.set(this.DestnatoinService.getAllAdminDestnation().subscribe({
         next:(res)=>{
           this.allDestionList.set(res.data);
-          console.log(this.allDestionList());
         },
         error:(err:HttpErrorResponse)=>{
           console.log(err.message);

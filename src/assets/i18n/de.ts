@@ -197,7 +197,22 @@ export const DE = {
       }
     }
     
-    ,HeroDiscription: "Entdecke dein nächstes Abenteuer"
+    ,HeroDiscription: "Entdecke dein nächstes Abenteuer",
+
+    WhyChooseUsTitle: "Warum Uns Wählen",
+    WhyChooseUsSubtitle: "Brillante Gründe",
+    
+    Service1Title: "Geführte Expertentouren",
+    Service1Description: "Entdecken Sie antike Wunder und historische Schätze mit unseren zertifizierten professionellen Guides.",
+    Service1Link: "Touren Erkunden",
+    
+    Service2Title: "Schöne Strandtrips",
+    Service2Description: "Genießen Sie die schönsten Strände des Roten Meeres und des Mittelmeers mit perfekt organisierten Ausflügen.",
+    Service2Link: "Trips Erkunden",
+    
+    Service3Title: "Wüstenabenteuer",
+    Service3Description: "Erleben Sie die Schönheit der ägyptischen Wüste mit unvergesslichen Safari- und Campingabenteuern.",
+    Service3Link: "Mehr Entdecken"
 
     
   };

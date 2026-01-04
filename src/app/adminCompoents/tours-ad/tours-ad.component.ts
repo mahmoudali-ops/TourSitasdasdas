@@ -50,7 +50,6 @@ export class ToursAdComponent implements  OnInit, OnDestroy {
           next: (res) => {
             this.AllToursList.set(res.data);
             this.totalCount = res.count; // مهم لعرض عدد الصفحات
-            console.log(res);
           },
           error: (err: HttpErrorResponse) => console.log(err)
         })
