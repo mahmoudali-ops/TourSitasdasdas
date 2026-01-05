@@ -39,6 +39,10 @@ export class TourService {
     return this.httpcleint.delete(`${environment.BaseUrl}/api/Tours/delete/${id}`);
   }
 
+  deleteImageTour(id:number):Observable<any>{
+    return this.httpcleint.delete(`${environment.BaseUrl}/api/TourImg/delete/${id}`);
+  }
+
   getAllDetaildedTour(id:number|null):Observable<any>{
     return this.httpcleint.get(`${environment.BaseUrl}/api/Tours/get-tour-for-update/${id}`);
   }

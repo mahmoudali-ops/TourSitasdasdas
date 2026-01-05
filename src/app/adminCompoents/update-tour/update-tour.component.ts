@@ -402,7 +402,19 @@ export class UpdateTourComponent implements OnInit {
   removeGalleryImage(index: number) {
     this.imagesList.splice(index, 1);
   }
-
+  removeExistingGalleryImage(imageId: number) {
+console.log('Deleting image with ID:', imageId);
+    this.tourService.deleteImageTour(imageId).subscribe({
+      next: () => {
+        this.existingImages = this.existingImages.filter(img => img.id !== imageId);
+        this.toaster.success('Image deleted successfully', 'Success');
+      },
+      error: (error) => {
+        console.error('Error deleting image:', error);
+        this.toaster.error('Failed to delete image', 'Error');
+      }
+    });
+  }
   // =========================
   // Existing Images
   // =========================
